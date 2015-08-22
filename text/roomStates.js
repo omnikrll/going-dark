@@ -3,7 +3,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy glares at the monitor: "Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows." The vid screen whispers static. Noise analysis suggests codec corruption.',
+			'events': 'Vidy glares at the monitor: "Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows." The vid screen whispers static. Noise Analysis Analysis Suggests Codec Corruption.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
@@ -30,7 +30,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy flares at the monitor: "Fix the power, robot. I want to watch. Then scan the archives for my least watched shows." The vid screen hisses static. Noise analysis suggests corruption.',
+			'events': 'Vidy flares at the monitor: "Fix the power, robot. I want to watch. Then scan the archives for my least watched shows." The vid screen hisses static. Noise Analysis Suggests Corruption.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
@@ -57,7 +57,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy stares the monitor: "Fix the power, friend. I want to. Please scan the archives for my least watched shows." The vid screen hisses static. Noise analysis suggests corruption.',
+			'events': 'Vidy stares the monitor: "Fix the power, friend. I want to. Please scan the archives for my least watched shows." The vid screen hisses static. Noise Analysis Suggests Corruption.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
@@ -84,7 +84,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy stares, a monitor: "Fix the power, friend. I want to. Please scan the archives for my least watched shows." The vid hisses static. Noise analysis suggests corruption.',
+			'events': 'Vidy stares, a monitor: "Fix the power, friend. I want to. Please scan the archives for my least watched shows." The vid hisses static. Noise Analysis Suggests Corruption.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
@@ -111,7 +111,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy stares, a monitor: "Fix the power. I want to. Please scan the archives for my least watched shows." The vid hisses static. Noise analysis corruption.',
+			'events': 'Vidy stares, a monitor: "Fix the power. I want to. Please scan the archives for my least watched shows." The vid hisses static. Noise Analysis Corruption.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
@@ -138,7 +138,7 @@ var roomStates = [
 	{
 		"Power_Room": {
 			'sign': 'Nav Systems',
-			'events': 'Vidy stares, a monitor: "Fix the power. I want to. Please scan the archives for my shows." The vid hisses static. Analysis corruption noise.',
+			'events': 'Vidy stares, a monitor: "Fix the power. I want to. Please scan the archives for my shows." The vid hisses static. Analysis Corruption Noise.',
 			'player_damage':'PROTOCOL',
 			'crewman_damage':'CALL VOLUME',
 			'no_damage':'HOLO'
