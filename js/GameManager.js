@@ -58,18 +58,27 @@ var GameManager = (function() {
 
 	$('.room_action').click(function() {
 		var id = $(this).parents('.View').data('crewman'),
-			crewman = game.crew[id];
+			crewman = game.crew[id],
+			attack = $(this).data('action'),
+			hit = attack == Math.floor(Math.random() * 3),
+			damaged = crewman.health > 0 ? crewman.attack() : false;
 
-		if ($(this).hasClass('player_damage')) {
-			console.log(crewman.name + ' damaged you');
+		if (hit) {
+			console.log('Player hits');
+			crewman.takeDamage();
+
+			if (game.crew[0].health == 0 && game.crew[1].health == 0 && game.crew[2].health == 0) {
+				alert('THE HUMANS ARE DEAD');
+			}
+		} else {
+			console.log('Player took no damage');
 		}
 
-		if ($(this).hasClass('crewman_damage')) {
-			console.log(crewman.name + ' took damage');
-		}
-
-		if ($(this).hasClass('no_damage')) {
-			console.log('neither you nor ' + crewman.name + ' took any damage');
+		if (damaged) {
+			console.log('Crewman hits');
+			game.player.takeDamage();
+		} else {
+			console.log('Crewman took no damage');
 		}
 	});
 })();

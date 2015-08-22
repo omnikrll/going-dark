@@ -8,23 +8,24 @@ var Crewman = (function() {
 
 	Crewman.prototype.constructor = Crewman;
 
-	Crewman.prototype.doRandomAction = function() {
-		var action = Math.floor(Math.random() * 2);
-		if (action) this.advance();
+	Crewman.prototype.attack = function() {
+		var hit = Math.floor(Math.random() * 2) == 1;
+		return hit;
 	};
 
-	Crewman.prototype.advance = function() {
-		while (this.position < 4) this.position++;
-		return this.position;
-	};
+	Crewman.prototype.takeDamage = function() {
+		if (!this.health) return;
 
-	Crewman.prototype.getHealth = function() {
-		return this.health;
-	};
+		this.health -= 20;
+		var li = $('#crewman_' + this.id),
+			span = li.find('.health');
 
-	Crewman.prototype.setHealth = function(health) {
-		this.health += health;
-		$('#crewman_' + this.id + ' .health').html(this.health);
+		if (!this.health) {
+			span.html('<strong>Vital signs unavailable.</strong>');
+			li.addClass('dead');
+		} else {
+			span.html(this.health + '%');
+		}
 	};
 
 	return Crewman;

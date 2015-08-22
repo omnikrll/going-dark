@@ -68,11 +68,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORT FROM CREW.',
-				'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORT FROM CREW.',
+			'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
@@ -90,12 +88,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR FROM CREW.',
-				'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
-			}
-
+			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR FROM CREW.',
+			'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
@@ -113,11 +108,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. BEHAVIOR FROM CREW.',
-				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. BEHAVIOR FROM CREW.',
+			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Second Class Attendant',
@@ -135,12 +128,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE: A CREATIVE CUISINE',
-				'report_1': 'TECHNICALLY. "BEHAVIOR".',
-				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
-			}
-
+			'report_0': 'FIRST MATE: A CREATIVE CUISINE',
+			'report_1': 'TECHNICALLY. "BEHAVIOR".',
+			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Class Attendant',
@@ -148,7 +138,7 @@ var textStates = [
 			'persona': 'PERSONALLY, I\'M',
 			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.\n Mission - Resources. Crew.'
 		}
-	}
+	},
 
 	//8: NULL (XXX)
 	{
@@ -158,12 +148,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST, A CREATIVE CUISINE',
-				'report_1': 'TECH. "BEHAVIOR".',
-				'report_2': 'U n AG NT INC MPL T . N  PR  RS'
-			}
-
+			'report_0': 'FIRST, A CREATIVE CUISINE',
+			'report_1': 'TECH. "BEHAVIOR".',
+			'report_2': 'U n AG NT INC MPL T . N  PR  RS'
 		},
 		'ship': {
 			'class': 'Classy Attendant',

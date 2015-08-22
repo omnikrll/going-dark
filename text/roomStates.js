@@ -187,7 +187,7 @@ var roomStates = [
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
 		}
-	}
+	},
 
 	//8: NULL
 		{
