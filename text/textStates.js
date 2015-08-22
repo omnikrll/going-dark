@@ -1,5 +1,5 @@
 var textStates = [
-//state 1: Neutral
+//state 1: Neutral ('w')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on cryostasis conditions and crew morale.',
@@ -13,12 +13,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Third Class A.I. Attendant',
+			'emoticon':'(\'w\')',
 			'persona': 'PERSONA RELIEF OUTLET',
-			'mood': '>MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.'
+			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-//	2: Peeved/Upset
+//	2: Peeved/Upset ('-')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -26,18 +27,20 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Humans',
+
 			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
 			'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(\'-\')',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//3: Passive Aggressive
+	//3: Passive Aggressive ('m')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -51,12 +54,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(\'m\')',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//4: Brooding
+	//4: Brooding (=_=)
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -64,18 +68,21 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
-			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-			'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
+			'reports': {
+				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORT FROM CREW.',
+				'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
+			}
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(=_=)',
 			'persona': 'PERSONA RELIEF',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//5: Malevolent
+	//5: Malevolent (#_#)
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -83,52 +90,86 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
-			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-			'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
+			'reports': {
+				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR FROM CREW.',
+				'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
+			}
+
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(#_#)',
 			'persona': 'PERSONAL RELIEF',
 			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//6: Erratic
+	//6: Erratic (@_$)
 	{
 		'header': {
-			'duration': '40-50 years, dependent on conditions and morale.',
+			'duration': '40-50 years, dependent on conditions',
 			'log': '"Ever since last week, we\'ve been up to our ears in repair orders and resources. Beats losing though. I\'m giving it years tops before we shoot this boat."'
 		},
 		'crew': {
 			'title': 'Organics',
-			'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
-			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR TOWARDS CREW.',
-			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			'reports': {
+				'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. BEHAVIOR FROM CREW.',
+				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			}
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
+			'class': 'Second Class Attendant',
+			'emoticon':'(@_$)',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
-			'mood': 'MISSING A PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.'
+			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.'
 		}
 	},
 
-	//7: Minimal
+	//7: Minimal (*x*)
 	{
 		'header': {
-			'duration': '40-50 years, dependent on conditions.',
-			'log': '"Ever since last week, we\'ve been up in repair orders and resources. Beets though. I\'m giving it years tops. we shoot this boat."'
+			'duration': '40-50 years dependent on conditions.',
+			'log': '"Ever since last week, we\'ve been up in repair orders and resources. Beets though. I\'m giving it years tops.  Shoot this boat."'
 		},
 		'crew': {
 			'title': 'Organics',
-			'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
-			'report_1': 'TECHNICALLY. BEHAVIOR.',
-			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			'reports': {
+				'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
+				'report_1': 'TECHNICALLY. "BEHAVIOR".',
+				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			}
+
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
-			'persona': 'PERSONALLY, I\'M RELIEVED',
-			'mood': 'MISSING. CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.'
+			'class': 'Class Attendant',
+			'emoticon':'(*x*)',
+			'persona': 'PERSONALLY, I\'M',
+			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.'
+		}
+	}
+
+	//8: NULL (XXX)
+	{
+		'header': {
+			'duration': '40-50 conditions.',
+			'log': '"Ever since last, we been up in repair and resource. Beets tho. I\'m giving years. This boat."'
+		},
+		'crew': {
+			'title': 'Organics',
+			'reports': {
+				'report_0': 'FIRST MATE: A CREATIVE CUISINE',
+				'report_1': 'TECH. "BEHAVIOR".',
+				'report_2': 'U n AG NT INC MPL T . N  PR  RS'
+			}
+
+		},
+		'ship': {
+			'class': 'Class Attendant',
+			'emoticon':'(XXX)',
+			'persona': 'I\'M',
+			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO.'
 		}
 	}
 ]

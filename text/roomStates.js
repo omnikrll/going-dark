@@ -39,7 +39,7 @@ var roomStates = [
 
 		"Crew_Room": {
 			'sign': 'Crew Quarters',
-			'events': 'Patry clicks the board into the AI I/O port, announcing to the empty room, "I\'m feeling. Run your Chess routine at 20% capacity." The old board is coated with a fresh interface skin.',
+			'events': 'Patry clicks the board into the AI I/O port, announcing to the empty room, "I\'m feeling. Run your Go routine at 20% capacity." The old board is coated with a fresh interface skin.',
 			'player_damage':'WINNING',
 			'crewman_damage':'SCRUBBED OXYGEN FILTERS',
 			'no_damage':'STOLEN FROM SUPPLY'
@@ -188,4 +188,32 @@ var roomStates = [
 			'no_damage':'VENT'
 		}
 	}
+
+	//8: NULL
+		{
+			"Power_Room": {
+				'sign': 'Nav Systems',
+				'events': 'Vidy stares, a monitor: "The power. I want to. Please the archives for my shows." The vid hisses. ANALYSIS CORRUPTION.',
+				'player_damage':'PROTOCOL',
+				'crewman_damage':'CALL VOLUME',
+				'no_damage':'HOLO'
+
+			},
+
+			"Crew_Room": {
+				'sign': 'Crew Quarters',
+				'events': 'Patry dips the AI I/O port, announcing to the room, "I\'m feeling. Run your routine capacity." The old board is coated with skin.',
+				'player_damage':'WINNING',
+				'crewman_damage':'SCRUBBED OXYGEN FILTERS',
+				'no_damage':'STOLEN FROM SUPPLY'
+			},
+
+			"ShipSystem_Room": {
+				'sign': 'Ship Systems Hub',
+				'events': 'TEMP: --° / INITIAL PROGNOSIS: DIRE. -',
+				'player_damage':'HEAT',
+				'crewman_damage':'COLD',
+				'no_damage':'VENT'
+			}
+		}
 ]
