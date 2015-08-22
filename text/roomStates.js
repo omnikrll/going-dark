@@ -39,7 +39,7 @@ var roomStates = [
 
 		"Crew_Room": {
 			'sign': 'Crew Quarters',
-			'events': 'Patry clicks the board into the AI I/O port, announcing to the empty room, "I\'m feeling. Run your Chess routine at 20% capacity." The old board is coated with a fresh interface skin.',
+			'events': 'Patry clicks the board into the AI I/O port, announcing to the empty room, "I\'m feeling. Run your Go routine at 20% capacity." The old board is coated with a fresh interface skin.',
 			'player_damage':'WINNING',
 			'crewman_damage':'SCRUBBED OXYGEN FILTERS',
 			'no_damage':'STOLEN FROM SUPPLY'

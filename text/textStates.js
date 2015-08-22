@@ -1,5 +1,5 @@
 var textStates = [
-//state 1: Neutral
+//state 1: Neutral ('w')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on cryostasis conditions and crew morale.',
@@ -13,12 +13,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Third Class A.I. Attendant',
+			'emoticon':'(\'w\')',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-//	2: Peeved/Upset
+//	2: Peeved/Upset ('-')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -33,12 +34,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(\'-\')',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//3: Passive Aggressive
+	//3: Passive Aggressive ('m')
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -52,12 +54,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(\'m\')',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//4: Brooding
+	//4: Brooding (=_=)
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -73,12 +76,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(=_=)',
 			'persona': 'PERSONA RELIEF',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//5: Malevolent
+	//5: Malevolent (#_#)
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions and morale.',
@@ -95,12 +99,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
+			'emoticon':'(#_#)',
 			'persona': 'PERSONAL RELIEF',
 			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE.'
 		}
 	},
 
-	//6: Erratic
+	//6: Erratic (@_$)
 	{
 		'header': {
 			'duration': '40-50 years, dependent on conditions',
@@ -116,12 +121,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Second Class Attendant',
+			'emoticon':'(@_$)',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
 			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.'
 		}
 	},
 
-	//7: Minimal
+	//7: Minimal (*x*)
 	{
 		'header': {
 			'duration': '40-50 years dependent on conditions.',
@@ -138,12 +144,13 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Class Attendant',
+			'emoticon':'(*x*)',
 			'persona': 'PERSONALLY, I\'M',
 			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.'
 		}
 	}
 
-	//8: NULL
+	//8: NULL (XXX)
 	{
 		'header': {
 			'duration': '40-50 conditions.',
@@ -160,6 +167,7 @@ var textStates = [
 		},
 		'ship': {
 			'class': 'Class Attendant',
+			'emoticon':'(XXX)',
 			'persona': 'I\'M',
 			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO.'
 		}
