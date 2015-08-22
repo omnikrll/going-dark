@@ -1,0 +1,18 @@
+#crew-roster {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#crew-roster li {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+
+#crew-roster li .name:after {
+	content: ':\a0';
+}
+
+#crew-roster li .health:after {
+	content: '%';
+}
