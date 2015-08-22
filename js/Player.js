@@ -1,24 +1,25 @@
 var Player = (function() {
 
 	var Player = function(textStates) {
-		this.health = 100;
-		this.currentState = 0;
-		this.textStates = textStates;
+		this.states = textStates;
+		this.stateCounter = 0;
+		this.state = this.states[this.stateCounter];
+		this.damageCounter = 0;
 	};
 
 	Player.prototype.constructor = Player;
 
 	Player.prototype.setTextState = function(i) {
-		var self = this,
-			state = self.textStates[i];
+		var self = this;
+		self.currentState = self.states[i];
 
-		if (!state) {
-			console.warn('textStates[' + i + '] does not exist');
+		if (!self.currentState) {
+			alert('Congratulations! You are now dead.');
 			return;
 		}
 
-		for (var s in state) {
-			var children = state[s],
+		for (var s in self.currentState) {
+			var children = self.currentState[s],
 				section = $('#' + s);
 
 			for (var c in children) {
@@ -27,8 +28,49 @@ var Player = (function() {
 				$('#' + c).html(text);
 			}
 		}
+	};
 
-		self.currentState = i;		
+	Player.prototype.takeDamage = function() {
+		var self = this;
+
+		self.damageCounter++;
+
+		if (self.damageCounter > 3) {
+			self.damageCounter = 0;
+			self.stateCounter++;
+			self.setTextState(self.stateCounter);
+			return;
+		}
+
+		for (var s in self.currentState) {
+			var children = self.currentState[s],
+				section = $('#' + s);
+
+			console.log(children);
+			for (var c in children) {
+				console.log(c);
+				var text = $('#' + c).html();
+				console.log(text);
+				var corrupted = self.corruptText(text);
+
+				$('#' + c).html(corrupted);
+			}
+		}
+	};
+
+	Player.prototype.corruptText = function(text) {
+		var self = this,
+			phrase = text.split(' ');
+
+		for (var i = 0; i < self.damageCounter * Math.floor(phrase.length / 3); i++) {
+			var x = Math.floor(Math.random() * phrase.length),
+				word = phrase[x],
+				binary = btoa(word);
+
+			phrase[x] = binary;
+		}
+
+		return phrase.join(' ');
 	};
 
 	return Player;

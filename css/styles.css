@@ -13,6 +13,10 @@ ul li {
 	padding: 0;
 }
 
-ul li .health:after {
-	content: '%';
+ul li.dead {
+	color: red;
+}
+
+ul li.dead span[id*="report"] {
+	text-decoration: line-through;
 }
