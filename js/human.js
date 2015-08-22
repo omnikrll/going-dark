@@ -1,6 +1,7 @@
 var Human = (function() {
-	var Human = function(name) {
+	var Human = function(name, id) {
 		this.name = name;
+		this.id = id;
 		this.health = 100;
 		this.position = 0;
 	};
@@ -28,7 +29,7 @@ var Human = (function() {
 	};
 
 	Human.prototype.rest = function() {
-		while (this.health < 100) this.health++;
+		while (this.health < 100) this.setHealth(1);
 		//todo- do this proportionately?
 	};
 
@@ -42,6 +43,7 @@ var Human = (function() {
 
 	Human.prototype.setHealth = function(health) {
 		this.health += health;
+		$('#human-' + this.id + ' .health').html(this.health);
 	};
 
 	return Human;
