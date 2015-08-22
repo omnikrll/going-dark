@@ -7,11 +7,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Crew',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
-				'report_1': 'Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.',
-				'report_2': 'Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.',
+			'report_2': 'U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
 		},
 		'ship': {
 			'class': 'Third Class A.I. Attendant',
@@ -28,11 +26,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Humans',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
-				'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
+			'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
@@ -49,18 +45,16 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Humans',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL AND CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL AND CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+			'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'persona': 'PERSONA RELIEF OUTLET',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
-	}
+	},
 
 	//4: Brooding
 	{
@@ -70,18 +64,16 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+			'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'persona': 'PERSONA RELIEF',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
 		}
-	}
+	},
 
 	//5: Malevolent
 	{
@@ -91,18 +83,16 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+			'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'persona': 'PERSONAL RELIEF',
 			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE.'
 		}
-	}
+	},
 
 	//6: Erratic
 	{
@@ -112,18 +102,16 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
-				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR TOWARDS CREW.',
-				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
-			}
+			'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
+			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR TOWARDS CREW.',
+			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
 			'mood': 'MISSING A PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.'
 		}
-	}
+	},
 
 	//7: Minimal
 	{
@@ -133,11 +121,9 @@ var textStates = [
 		},
 		'crew': {
 			'title': 'Organics',
-			'reports': {
-				'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
-				'report_1': 'TECHNICALLY. BEHAVIOR.',
-				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
-			}
+			'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
+			'report_1': 'TECHNICALLY. BEHAVIOR.',
+			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
 			'class': 'Second Class A.I. Attendant',

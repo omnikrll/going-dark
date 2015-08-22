@@ -23,25 +23,25 @@
   <section id="crew">
     <strong>Crew</strong><br/>
     <ul>
-      <li id="human_0">
+      <li id="crewman_0">
         <div>Patry Garcia</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
-          <li>Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</li>
+          <li>Internal Report: <span id="report_0">FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</span></li>
         </ul>
       </li>
-      <li id="human_1">
+      <li id="crewman_1">
         <div>Arymo Watson</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
-          <li>Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</li>
+          <li>Internal Report: <span id="report_1">TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</span></li>
         </ul>
       </li>
-      <li id="human_2">
+      <li id="crewman_2">
         <div>Vidy Grichy</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
-          <li>Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</li>
+          <li>Internal Report: <span id="report_2">U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</span></li>
         </ul>
       </li>
     </ul>
@@ -50,7 +50,7 @@
   <!-- todo: replace all below with vars-->
   <section id="ship">
     <div>SHIP MAINTENANCE: 100%</div>
-    <div><span id="class">Third</span> Class A.I. Attendant<div>
+    <div id="class"><div>
     <ul>
       <li>Persona Integrity: 100%</li>
       <li>I/O Connectivity: 100%</li>
@@ -82,8 +82,13 @@
 INITIAL PROGNOSIS: DIRE</p>
 </div>
 
+<a href="#" class="player-damage">action</a>
+<a href="#" class="human-damage">action</a>
+<a href="#" class="no-damage">action</a>
+
 <script src="textStates.js"></script>
-<script src="js/human.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Crewman.js"></script>
 <script src="js/GameManager.js"></script>
 </body>
 </html>
