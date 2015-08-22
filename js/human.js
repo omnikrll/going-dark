@@ -43,7 +43,7 @@ var Human = (function() {
 
 	Human.prototype.setHealth = function(health) {
 		this.health += health;
-		$('#human-' + this.id + ' .health').html(this.health);
+		$('#human_' + this.id + ' .health').html(this.health);
 	};
 
 	return Human;
