@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Going Dark</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <div class="View" id="Main-Room">
@@ -13,10 +17,10 @@
   Mission: Exploratory<br/>
   Expected duration: 40-50 years, dependant on cryostasis conditions and crew morale.<br/>
 
-  <p><strong>Crew</strong><br/>
-  &emsp;Patry Garcia: 0<br/>
-  &emsp;Arymo Watson: 0<br/>
-  &emsp;Vidy Grichy: 0<br/></p>
+  <div>
+    <strong>Crew</strong>
+    <ul id="crew-roster"></ul>
+  </div>
 
   <p>SHIP MAINTENANCE: 100%<br/>
   Third Class A.I. Attendant<br/>
@@ -43,5 +47,7 @@
 INITIAL PROGNOSIS: DIRE</p>
 </div>
 
+<script src="js/Human.js"></script>
+<script src="js/GameManager.js"></script>
 </body>
 </html>
