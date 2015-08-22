@@ -3,39 +3,56 @@
 <head>
 <meta charset="utf-8">
 <title>Going Dark</title>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+<script src="vendor/jquery-1.11.3.min.js"></script>
+<script src="vendor/Queue.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <div class="View" id="Main-Room">
-  <p>LOCATION:<br/>
-  Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</p>
+  <h1>LOCATION:</h1>
+  <p>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</p>
 
-  <p>Date of Departure: MMMLXI<br/>
-  Mission: Exploratory<br/>
-  Expected duration: 40-50 years, dependent on cryostasis conditions and crew morale.<br/>
-  <p>Most Recent Crew Log: <br/>
-    "Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</p>
+  <div id="header">
+      <div>Date of Departure: MMMLXI</div>
+      <div>Mission: Exploratory</div>
+      <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
+      <div>Most Recent Crew Log:</div>
+      <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
+  </div>
 
-  <p><strong>Crew</strong><br/>
-  &emsp;Patry Garcia<br/>
-  &emsp;&emsp;Triage: HEALTH VAL<br/>
-  &emsp;&emsp;Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE<br/>
-  &emsp;Arymo Watson<br/>
-  &emsp;&emsp;Triage: HEALTH VAL<br/>
-  &emsp;&emsp;Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS. <br/>
-  &emsp;Vidy Grichy<br/>
-  &emsp;&emsp;Triage: HEALTH VAL<br/>
-  &emsp;&emsp;Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA<br/></p>
+  <div>
+    <strong>Crew</strong><br/>
+    <ul>
+      <li id="human_0">
+        <div>Patry Garcia</div>
+        <ul>
+          <li>Triage: <span class="health">100</span></li>
+          <li>Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</li>
+        </ul>
+      </li>
+      <li id="human_1">
+        <div>Arymo Watson</div>
+        <ul>
+          <li>Triage: <span class="health">100</span></li>
+          <li>Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</li>
+        </ul>
+      </li>
+      <li id="human_2">
+        <div>Vidy Grichy</div>
+        <ul>
+          <li>Triage: <span class="health">100</span></li>
+          <li>Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
   <!-- todo: replace all below with vars-->
-  <p>SHIP MAINTENANCE: 100%<br/>
-  Third Class A.I. Attendant<br/>
-  &emsp;Persona Integrity: 100%<br/>
-  &emsp;I/O Connectivity: 100%<br/>
-  &emsp;System Power: 100%</p>
+      <p>SHIP MAINTENANCE: 100%<br/>
+      Third Class A.I. Attendant<br/>
+      &emsp;Persona Integrity: 100%<br/>
+      &emsp;I/O Connectivity: 100%<br/>
+      &emsp;System Power: 100%</p>
 
 <p><strong>PERSONA RELIEF OUTLET</strong><br/>
 MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.
@@ -60,7 +77,8 @@ MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATION
 INITIAL PROGNOSIS: DIRE</p>
 </div>
 
-<script src="js/Human.js"></script>
+<script src="textStates.js"></script>
+<script src="js/human.js"></script>
 <script src="js/GameManager.js"></script>
 </body>
 </html>
