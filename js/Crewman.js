@@ -2,7 +2,7 @@ var Crewman = (function() {
 	var Crewman = function(name, id) {
 		this.name = name;
 		this.id = id;
-		this.health = 8;
+		this.health = 100;
 		this.position = 0;
 	};
 
@@ -14,7 +14,9 @@ var Crewman = (function() {
 	};
 
 	Crewman.prototype.takeDamage = function() {
-		this.health--;
+		if (!this.health) return;
+
+		this.health -= 20;
 		var li = $('#crewman_' + this.id),
 			span = li.find('.health');
 
@@ -22,7 +24,7 @@ var Crewman = (function() {
 			span.html('<strong>Vital signs unavailable.</strong>');
 			li.addClass('dead');
 		} else {
-			span.html((this.health / 8 * 100) + '%');
+			span.html(this.health + '%');
 		}
 	};
 

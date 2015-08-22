@@ -46,12 +46,11 @@ var Player = (function() {
 			var children = self.currentState[s],
 				section = $('#' + s);
 
-			console.log(children);
 			for (var c in children) {
-				console.log(c);
-				var text = $('#' + c).html();
-				console.log(text);
-				var corrupted = self.corruptText(text);
+				if (!$('#' + c).length) console.log(c, children[c], $('#' + c).length);
+
+				var text = $('#' + c).html(),
+					corrupted = self.corruptText(text);
 
 				$('#' + c).html(corrupted);
 			}
@@ -59,6 +58,7 @@ var Player = (function() {
 	};
 
 	Player.prototype.corruptText = function(text) {
+
 		var self = this,
 			phrase = text.split(' ');
 
