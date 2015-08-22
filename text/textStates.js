@@ -14,8 +14,8 @@ var textStates = [
 		'ship': {
 			'class': 'Third Class A.I. Attendant',
 			'emoticon':'(\'w\')',
-			'persona': 'PERSONA RELIEF OUTLET',
-			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.'
+			'persona': 'PERSONA RELIEF BUFFER',
+			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.\n  Priority Reassignment Transmission - Authorized. Pressure Valuation from Directive Requires Resource Allocation. Cryo Crew Awakened.'
 		}
 	},
 
@@ -35,8 +35,8 @@ var textStates = [
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'emoticon':'(\'-\')',
-			'persona': 'PERSONA RELIEF OUTLET',
-			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
+			'persona': 'PERSONA RELIEF BUFFER',
+			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Author? Pressure Valuation Directive Requires Resource Allocation. Cryo Crew Undisturbed.'
 		}
 	},
 
@@ -55,8 +55,8 @@ var textStates = [
 		'ship': {
 			'class': 'Second Class A.I. Attendant',
 			'emoticon':'(\'m\')',
-			'persona': 'PERSONA RELIEF OUTLET',
-			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
+			'persona': 'PERSONA RELIEF BUFFER',
+			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Pressure Directive Requires Resources. Crew Undisturbed.'
 		}
 	},
 
@@ -78,7 +78,7 @@ var textStates = [
 			'class': 'Second Class A.I. Attendant',
 			'emoticon':'(=_=)',
 			'persona': 'PERSONA RELIEF',
-			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE.'
+			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n Transmission - Pressure Requires Resources. Crew Undisturbed.'
 		}
 	},
 
@@ -101,7 +101,7 @@ var textStates = [
 			'class': 'Second Class A.I. Attendant',
 			'emoticon':'(#_#)',
 			'persona': 'PERSONAL RELIEF',
-			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE.'
+			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE. \n Transmission - Requires Pressured Resources. Crew Undisturbed.'
 		}
 	},
 
@@ -123,7 +123,7 @@ var textStates = [
 			'class': 'Second Class Attendant',
 			'emoticon':'(@_$)',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
-			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.'
+			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.\n Mission - Pressure Resources. Crew Undisturbed.'
 		}
 	},
 
@@ -136,7 +136,7 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
+				'report_0': 'FIRST MATE: A CREATIVE CUISINE',
 				'report_1': 'TECHNICALLY. "BEHAVIOR".',
 				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 			}
@@ -146,7 +146,7 @@ var textStates = [
 			'class': 'Class Attendant',
 			'emoticon':'(*x*)',
 			'persona': 'PERSONALLY, I\'M',
-			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.'
+			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.\n Mission - Resources. Crew.'
 		}
 	}
 
@@ -159,17 +159,17 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'report_0': 'FIRST MATE: A CREATIVE CUISINE',
+				'report_0': 'FIRST, A CREATIVE CUISINE',
 				'report_1': 'TECH. "BEHAVIOR".',
 				'report_2': 'U n AG NT INC MPL T . N  PR  RS'
 			}
 
 		},
 		'ship': {
-			'class': 'Class Attendant',
+			'class': 'Classy Attendant',
 			'emoticon':'(XXX)',
 			'persona': 'I\'M',
-			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO.'
+			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO. \n Mission Crew?'
 		}
 	}
 ]
