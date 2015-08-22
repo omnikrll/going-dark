@@ -8,9 +8,9 @@ var textStates = [
 		'crew': {
 			'title': 'Crew',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
-				'human_1': 'Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.',
-				'human_2': 'Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
+				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
+				'report_1': 'Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.',
+				'report_2': 'Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
 			}
 		},
 		'ship': {
@@ -29,9 +29,9 @@ var textStates = [
 		'crew': {
 			'title': 'Humans',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
-				'human_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
-				'human_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
+				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
+				'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
 			}
 		},
 		'ship': {
@@ -50,9 +50,9 @@ var textStates = [
 		'crew': {
 			'title': 'Humans',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL AND CREATIVE CUISINE',
-				'human_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'human_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
+				'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL AND CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+				'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
 			}
 		},
 		'ship': {
@@ -71,9 +71,9 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
-				'human_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'human_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
+				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+				'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
 			}
 		},
 		'ship': {
@@ -92,9 +92,9 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
-				'human_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-				'human_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
+				'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
+				'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
 			}
 		},
 		'ship': {
@@ -113,9 +113,9 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'human_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
-				'human_1': 'TECHNICIAN. ERRATIC BEHAVIOR TOWARDS CREW.',
-				'human_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+				'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
+				'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR TOWARDS CREW.',
+				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 			}
 		},
 		'ship': {
@@ -134,9 +134,9 @@ var textStates = [
 		'crew': {
 			'title': 'Organics',
 			'reports': {
-				'human_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
-				'human_1': 'TECHNICALLY. BEHAVIOR.',
-				'human_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+				'report_0': 'FIRST MATE. A DISPLAY OF CREATIVE CUISINE',
+				'report_1': 'TECHNICALLY. BEHAVIOR.',
+				'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
 			}
 		},
 		'ship': {
