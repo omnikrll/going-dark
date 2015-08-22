@@ -20,29 +20,24 @@
       <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
   </section>
 
-  <div id = "crew">
-    <strong><span id="title">Crew</span></strong><br/>
-    <ul id = "reports">
-=======
   <section id="crew">
     <strong>Crew</strong><br/>
     <ul>
->>>>>>> 3b44520f1ccc823fbf56b4e1b565297d24a7737c
-      <li id="human_0">
+      <li id="crewman_0">
         <div>Patry Garcia</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
           <li><span id="report_0">Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</span></li>
         </ul>
       </li>
-      <li id="human_1">
+      <li id="crewman_1">
         <div>Arymo Watson</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
           <li><span id="report_1">Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</span></li>
         </ul>
       </li>
-      <li id="human_2">
+      <li id="crewman_2">
         <div>Vidy Grichy</div>
         <ul>
           <li>Triage: <span class="health">100</span></li>
@@ -52,39 +47,20 @@
     </ul>
   </section>
 
-<<<<<<< HEAD
-  <div id = "ship">
-    <ul>
-      <li>SHIP MAINTENANCE: 100%</li>
-      <li><span id="class">Third Class A.I. Attendant</span></li>
-=======
   <!-- todo: replace all below with vars-->
   <section id="ship">
     <div>SHIP MAINTENANCE: 100%</div>
-    <div><span id="class">Third</span> Class A.I. Attendant<div>
+    <div><span id="class">Third Class A.I. Attendant</span><div>
     <ul>
->>>>>>> 3b44520f1ccc823fbf56b4e1b565297d24a7737c
       <li>Persona Integrity: 100%</li>
       <li>I/O Connectivity: 100%</li>
       <li>System Power: 100%</li>
     </ul>
-<<<<<<< HEAD
-
-    <strong><span id="persona">PERSONA RELIEF OUTLET<span></strong>
-    <ul>
-      <li><span id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</span></li>
-    </ul>
-
-  <p>SUBROUTINES DEMAND ATTENTION<br/>
-  <strong>&#60;POWER&#62;</strong>&emsp;<strong>&#60;CREW&#62;</strong>&emsp; <strong>&#60;SHIP SYSTEMS&#62;</strong></p>
-  </div>
-=======
 
     <p></p> <!-- this is just here for spacing -->
     <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
     <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
   </section>
->>>>>>> 3b44520f1ccc823fbf56b4e1b565297d24a7737c
 
   <div>
     <div>SUBROUTINES DEMAND ATTENTION</div>
@@ -93,29 +69,29 @@
 </div>
 
 <!-- from choices in main room-->
-<div class="View" id="Power-Room">
-<p><strong><span class="sign">Power Control</span></strong><br/><span class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</span></p>
+<div class="View" id="Power_Room" data-crewman="2">
+  <p><strong><span class="sign">Power Control</span></strong><br/><span class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</span></p>
 
-<strong>&#60;<span class="player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="no_damage">SHIP SYSTEMS</span>&#62;</strong>
+  <strong>&#60;<span class="room_action player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action no_damage">SHIP SYSTEMS</span>&#62;</strong>
 </div>
 
-<div class="View" id="Crew-Room">
-<p><strong><span class="sign">Crew Quarters</span></strong><br/><span class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</span></p>
+<div class="View" id="Crew_Room" data-crewman="0">
+  <p><strong><span class="sign">Crew Quarters</span></strong><br/><span class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</span></p>
 
-<strong>&#60;<span class="player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="no_damage">SHIP SYSTEMS</span>&#62;</strong>
+  <strong>&#60;<span class="room_action player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action no_damage">SHIP SYSTEMS</span>&#62;</strong>
 </div>
 
-<div class="View" id="ShipSystems-Room">
-<p><strong><span class="sign">Ship Systems Hub</span></strong>
-<span class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</span></p>
+<div class="View" id="ShipSystems_Room" data-crewman="1">
+  <p><strong><span class="sign">Ship Systems Hub</span></strong>
+  <span class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</span></p>
 
-<strong>&#60;<span class="player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="no_damage">SHIP SYSTEMS</span>&#62;</strong>
-
+  <strong>&#60;<span class="room_action player_damage">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action crewman_damage">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action no_damage">SHIP SYSTEMS</span>&#62;</strong>
 </div>
 
 <script src="text/textStates.js"></script>
 <script src="text/roomStates.js"></script>
-<script src="js/human.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Crewman.js"></script>
 <script src="js/GameManager.js"></script>
 </body>
 </html>

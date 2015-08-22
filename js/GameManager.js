@@ -1,26 +1,75 @@
-var crew;
+var game;
+
+var GameManager = (function() {
+	var GameManager = function() {
+		this.crew;
+		this.player;
+		this.rooms = {
+			'Power_Room': 2,
+			'Crew_Room': 0,
+			'ShipSystems_Room': 1
+		};
+
+		this.init();
+	};
+
+	GameManager.prototype.constructor = GameManager;
+
+	GameManager.prototype.init = function() {
+		var self = this;
+
+		self.crew = [
+			new Crewman('Patry Garcia', 0),
+			new Crewman('Arymo Watson', 1),
+			new Crewman('Vidy Grichy', 2)
+		];
+
+		self.player = new Player(textStates);
+		self.player.setTextState(0);
+		self.setRoomState(0);
+	}
+
+	GameManager.prototype.setRoomState = function(i) {
+		var self = this,
+			state = roomStates[i];
+
+		if (!state) {
+			console.log('roomState[' + i + '] does not exist');
+			return;
+		}
+
+		for (var r in state) {
+			var children = state[r],
+				room = $('#' + r);
+
+			for (var c in children) {
+				var text = children[c];
+
+				room.find('.' + c).html(text);
+			}
+		}
+	}
+
+	return GameManager;
+})();
 
 (function() {
+	game = new GameManager();
 
-	// create crew members
-	crew = [
-		new Human('Patry Garcia', 0),
-		new Human('Arymo Watson', 1),
-		new Human('Vidy Grichy', 2)
-	];
+	$('.room_action').click(function() {
+		var id = $(this).parents('.View').data('crewman'),
+			crewman = game.crew[id];
 
-	// render them to the dom
-	// for (var i=0,ii=crew.length; i<ii; i++) {
-	// 	var human = crew[i];
-	// 	console.log(human.name);
-	// 	var list_item = $('<li></li>').attr('id', 'human-' + human.id);
+		if ($(this).hasClass('player_damage')) {
+			console.log(crewman.name + ' damaged you');
+		}
 
-	// 	var name = $('<span></span>').addClass('name').html(human.name);
-	// 	list_item.append(name);
+		if ($(this).hasClass('crewman_damage')) {
+			console.log(crewman.name + ' took damage');
+		}
 
-	// 	var health = $('<span></span>').addClass('health').html(human.health);
-	// 	list_item.append(health);
-
-	// 	$('#crew-roster').append(list_item);
-	// }
+		if ($(this).hasClass('no_damage')) {
+			console.log('neither you nor ' + crewman.name + ' took any damage');
+		}
+	});
 })();
