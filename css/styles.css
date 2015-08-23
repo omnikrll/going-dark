@@ -78,7 +78,7 @@ body {
 	border-radius: 11px;
 }
 
-.windowtextbuff {
+#windowtextbuff {
 	position: absolute;
 	word-wrap: break-word;
 	margin-left: 20%;

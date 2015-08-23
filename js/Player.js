@@ -62,6 +62,7 @@ var Player = (function() {
 	Player.prototype.SystemBoot = function() {
 		var texts = $('.alt_text');
 		var rebootTimer = 500;
+		var flash;
 
 		$('#altwindow').removeClass('hidden');
 		texts.addClass('hidden');
@@ -72,6 +73,18 @@ var Player = (function() {
 		setTimeout(function () {texts.eq(3).removeClass("hidden") }, rebootTimer * 5);
 
 		setTimeout(function() {	$('#altwindow').addClass('hidden'); }, rebootTimer * 6);
+
+		flash = setInterval(function () {
+			$('#windowtextbuff').addClass('hidden');
+
+			setTimeout(function () {
+				$('#windowtextbuff').removeClass('hidden');
+			}, rebootTimer/4);
+		}, rebootTimer-32);
+
+		setTimeout(function () {
+			clearInterval(flash);
+		}, rebootTimer * 6);
 	}
 
 	Player.prototype.LoseScreen = function() {
@@ -90,14 +103,17 @@ var Player = (function() {
 		string += "I'LL BE FINE ...";
 
 		setInterval(function () {
-			if(Math.random(0,1) === 0) {
-				string += "OK ...";
-			} else {
-				string += "OK !!!";
-			}
-
+			string += "OK !!!";
 			texts.eq(3).html(string);
 		}, rebootTimer/2);
+
+		setInterval(function () {
+			$('#windowtextbuff').addClass('hidden');
+
+			setTimeout(function () {
+				$('#windowtextbuff').removeClass('hidden');
+			}, rebootTimer/4);
+		}, rebootTimer-32);
 	}
 
 	Player.prototype.WinScreen = function() {
@@ -112,6 +128,10 @@ var Player = (function() {
 			"color": "white"
 		});
 
+		$('#screenlist').css({
+			"padding-top": "16%",
+		});
+
 		$('#altwindow').removeClass('hidden');
 		texts.addClass('hidden');
 		texts.addClass('centered');
@@ -119,17 +139,14 @@ var Player = (function() {
 		texts.eq(0).html("<br/>ALL THE HUMANS");
 		texts.eq(1).html("ARE GONE NOW");
 		texts.eq(2).html("THE SHIP IS");
-		texts.eq(3).html("FINALLY QUIET <span class=\"blink-me\">_</span>");
+		texts.eq(3).html("FINALLY QUIET :3 <span class=\"blink-me\">_</span>");
 
 		setTimeout(function () {texts.eq(0).removeClass("hidden") }, rebootTimer * 2);
 		setTimeout(function () {texts.eq(1).removeClass("hidden") }, rebootTimer * 3);
 		setTimeout(function () {texts.eq(2).removeClass("hidden") }, rebootTimer * 4);
 		setTimeout(function () {texts.eq(3).removeClass("hidden") }, rebootTimer * 5);
-	}
 
-	Player.prototype.windowAppear = function() {
-		$('altwindow').removeClass('hidden');
-	};
+	}
 
 	Player.prototype.corruptText = function(text) {
 
