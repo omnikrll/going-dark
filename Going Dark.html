@@ -11,17 +11,16 @@
 <div class="wrapper">
   <div class="content">
     <div class="View" id="Main-Room">
-      <div class="transparent" id="altwindow">
-        <div class="windowtextbuff">
-          <ul><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
-          <li><div class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </div></li>
-          <li><div class="alt_text">LOCATING SYSTEM IMAGE ... </div></li>
-          <li><div class="alt_text">BEGINNING SYSTEM SCAN ...</div></li>
-          <li><div class="alt_text">OK ...</div></li>
+      <div class="hidden" id="altwindow">
+        <div id="windowtextbuff"><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
+          <ul id="screenlist">
+            <li class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </li>
+            <li class="alt_text">LOCATING SYSTEM IMAGE ... </li>
+            <li class="alt_text">BEGINNING SYSTEM SCAN ...</li>
+            <li class="alt_text">OK ...</li>
         </ul>
         </div>
       </div>
-
       <div class="banner">
         <div>LOCATION &amp; STATUS</div>
         <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
@@ -63,7 +62,6 @@
         </ul>
       </section>
 
-      <!-- todo: replace all below with vars-->
       <section id="ship">
         <div>SHIP MAINTENANCE: 100%</div>
         <div><span id="class">Third Class A.I. Attendant</span><div>
@@ -110,12 +108,17 @@
 
       <div id="text-prompt" class="hidden">
         <div>ENTER CONFIRMATION CODE</DIV>
+<<<<<<< HEAD
         <div id="target-string" unselectable="on" onselectstart="return false;" onmousedown="return false;"></div>
+=======
+        <div id="target-string"></div>
+>>>>>>> text-dev
         <textarea id="text-area" maxlength="30" spellcheck="false"></textarea>
         <div id="time"></div>
         <span id="result" class="blink-me"></span>
       </div>
     </section>
+<<<<<<< HEAD
 
     <div id="reboot">
       <div class="rebootBuff">
@@ -128,6 +131,8 @@
       </div>
     </div>
 
+=======
+>>>>>>> text-dev
     <div class="overlay"></div>
   </div>
 </div>
