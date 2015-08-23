@@ -52,6 +52,7 @@ body {
 	-webkit-opacity: 0.4;
 	-moz-opacity: 0.4;
 	opacity: 0.4;
+	z-index:1000;
 }
 
 .banner {
@@ -69,7 +70,7 @@ section {
 	padding: 10px;
 	border: 1px dashed;
 	float: left;
-	/*overflow: scroll;*/
+	overflow: scroll;
 }
 
 section.control-panel {
