@@ -25,6 +25,7 @@ var GameManager = (function() {
 		];
 
 		self.player = new Player(textStates);
+		self.player.SystemBoot();
 		self.player.setTextState(0);
 		self.setRoomState(0);
 	}
