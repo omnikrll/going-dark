@@ -115,6 +115,10 @@ var interval;
 		if (success) {
 			game.crew[crewman_id].takeDamage();
 			message += 'VALID&#62;';
+			if (game.crew[0].health == 0 && game.crew[1].health == 0 && game.crew[2].health == 0) {
+				game.player.WinScreen();
+				return;
+			}
 		} else {
 			game.player.takeDamage();
 			message += 'INVALID&#62;';
