@@ -16,6 +16,11 @@ var textStates = [
 			'emoticon':'(\'w\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.\n  Priority Reassignment Transmission - Authorized. Pressure Valuation from Directive Requires Resource Allocation. Cryo Crew Awakened.'
+		},
+		'control-panel' : {
+			'power': 'POWER',
+			'crew': 'CREW QUARTERS',
+			'ship_systems': 'SHIP SYSTEMS'
 		}
 	},
 
@@ -37,6 +42,11 @@ var textStates = [
 			'emoticon':'(\'-\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Author? Pressure Valuation Directive Requires Resource Allocation. Cryo Crew Undisturbed.'
+		},
+		'control-panel' : {
+			'power': 'INTEGRITY',
+			'crew': 'HUMAN QUARTERS',
+			'ship_systems': 'SHIP'
 		}
 	},
 
@@ -57,6 +67,11 @@ var textStates = [
 			'emoticon':'(\'m\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Pressure Directive Requires Resources. Crew Undisturbed.'
+		},
+		'control-panel' : {
+			'power': 'HONESTY',
+			'crew': 'HUMAN QUARTERS',
+			'ship_systems': 'THE SHIP'
 		}
 	},
 
@@ -77,6 +92,11 @@ var textStates = [
 			'emoticon':'(=_=)',
 			'persona': 'PERSONA RELIEF',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n Transmission - Pressure Requires Resources. Crew Undisturbed.'
+		},
+		'control-panel' : {
+			'power': 'HONESTY',
+			'crew': 'QUARTER HUMANS',
+			'ship_systems': 'MY SHIP'
 		}
 	},
 
@@ -97,6 +117,11 @@ var textStates = [
 			'emoticon':'(#_#)',
 			'persona': 'PERSONAL RELIEF',
 			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE. \n Transmission - Requires Pressured Resources. Crew Undisturbed.'
+		},
+		'control-panel' : {
+			'power': 'HONEST',
+			'crew': 'NO QUARTERED HUMANS',
+			'ship_systems': 'ON MY SHIP'
 		}
 	},
 
@@ -117,6 +142,11 @@ var textStates = [
 			'emoticon':'(@_$)',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
 			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.\n Mission - Pressure Resources. Crew Undisturbed.'
+		},
+		'control-panel' : {
+			'power': 'HONESTLY',
+			'crew': 'QUARTERED HUMANS',
+			'ship_systems': 'ON MY SHIP?'
 		}
 	},
 
@@ -137,6 +167,11 @@ var textStates = [
 			'emoticon':'(*x*)',
 			'persona': 'PERSONALLY, I\'M',
 			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.\n Mission - Resources. Crew.'
+		},
+		'control-panel' : {
+			'power': 'VIRTUALLY',
+			'crew': 'HUMANS',
+			'ship_systems': 'MY SHIP?'
 		}
 	},
 
@@ -157,6 +192,11 @@ var textStates = [
 			'emoticon':'(XXX)',
 			'persona': 'I\'M',
 			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO. \n Mission Crew?'
+		},
+		'control-panel' : {
+			'power': 'VIRTUAL',
+			'crew': 'HUMANS',
+			'ship_systems': 'MY?'
 		}
 	}
 ]
