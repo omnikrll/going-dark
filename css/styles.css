@@ -39,6 +39,25 @@ body {
 	border-radius: 11px;
 }
 
+.content:after {
+    content: "";
+    display: block;
+    background-image: url('../images/scanline_arrows.png');
+    background-position-y: -16px;
+    background-position-x: 1px;
+    background-size: 836px 653px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+}
+
 .overlay {
 	position: absolute;
 	top: 0;
