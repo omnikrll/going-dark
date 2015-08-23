@@ -83,6 +83,56 @@ var Player = (function() {
 			}, rebootTimer);
 	}
 
+	Player.prototype.LoseScreen = function() {
+		var rebootScreen = document.getElementsById('reboot');
+		var checkText = document.getElementsById('check');
+		var imageLocText = document.getElementsById('imageLoc');
+		var scanText = document.getElementsById('scan');
+		var okText = document.getElementsById('ok');
+		var rebootTimer = 1000;
+
+		var string = "OK...";
+
+		rebootScreen.style.opacity = "1";
+		rebootScreen.style.pointer-events = "all";
+
+		setTimeout(function () {
+			checkText.style.opacity = "1";
+			imageLocText.style.opacity = "1";
+			scanText.style.opacity = "1";
+			okText.style.opacity = "1";
+		}, rebootTimer);
+
+		setInterval(function () {
+			string += "OK..."$("okText").(str);
+		}, rebootTimer);
+	}
+
+	Player.prototype.WinScreen = function() {
+		var rebootScreen = document.getElementsById('reboot');
+		var checkText = document.getElementsById('check');
+		var imageLocText = document.getElementsById('imageLoc');
+		var scanText = document.getElementsById('scan');
+		var okText = document.getElementsById('ok');
+		var rebootTimer = 1000;
+
+		var string = "OK...";
+
+		rebootScreen.style.opacity = "1";
+		rebootScreen.style.pointer-events = "all";
+
+		setTimeout(function () {
+			checkText.style.opacity = "1";
+			imageLocText.style.opacity = "1";
+			scanText.style.opacity = "1";
+			okText.style.opacity = "1";
+		}, rebootTimer);
+
+		setInterval(function () {
+			string += "OK..."$("okText").(str);
+		}, rebootTimer);
+	}
+
 	Player.prototype.corruptText = function(text) {
 
 		var self = this,
