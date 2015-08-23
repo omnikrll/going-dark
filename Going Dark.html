@@ -71,9 +71,9 @@
     <section class="control-panel">
       <div>SUBROUTINES DEMAND ATTENTION</div>
       <div>
-        <span class="room_action" data-room="Power_Room">&#60;POWER&#62;</span>
-        <span class="room_action" data-room="Crew_Room">&#60;CREW&#62;</span>
-        <span class="room_action" data-room="ShipSystems_Room">&#60;SHIP SYSTEMS&#62;</span>
+        <span class="room_action" data-room="Power_Room" data-crewman="2">&#60;POWER&#62;</span>
+        <span class="room_action" data-room="Crew_Room" data-crewman="0">&#60;CREW&#62;</span>
+        <span class="room_action" data-room="ShipSystems_Room" data-crewman="1">&#60;SHIP SYSTEMS&#62;</span>
       </div>
 
       <!-- from choices in main room-->
@@ -92,11 +92,16 @@
         <div class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</div>
       </div>
 
-      <div class="text-prompt-button blink-me hidden">
-          <span class="show-prompt">&#60;CONFIRMATION REQUIRED&#62;</span>
+      <div class="centered">
+          <span class="text-prompt-button blink-me hidden">&#60;CONFIRMATION REQUIRED&#62;</span>
       </div>
 
       <div class="text-prompt hidden">
+        <div>ENTER CONFIRMATION CODE</DIV>
+        <div id="target-string"></div>
+        <textarea id="text-area" maxlength="30" spellcheck="false"></textarea>
+        <div id="time"></div>
+        <span id="result" class="blink-me"></span>
       </div>
     </section>
     <div class="overlay"></div>

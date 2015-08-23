@@ -22,14 +22,14 @@ body {
 }
 
 .wrapper {
-	width: 800px;
+	width: 840px;
 	margin: 2em auto;
 }
 
 .content {
-	width: 800px;
-	height: 600px;
-	padding: 1em;
+	width: 840px;
+	height: 640px;
+	padding: 29px;
 	border: 1px solid #131313;
 	background: #131313;
 	position: relative;
@@ -64,7 +64,7 @@ p {
 }
 
 section {
-	margin: 10px;
+	margin: 15px;
 	width: 360px;
 	height: 250px;
 	padding: 10px;
@@ -89,9 +89,9 @@ ul li {
 	padding: 0;
 }
 
-ul li.dead {
+/*ul li.dead {
 	color: red;
-}
+}*/
 
 ul li.dead span[id*="report"] {
 	text-decoration: line-through;
@@ -102,7 +102,11 @@ span.room_action {
 	margin-right: 1em;
 }
 
-span.room_action.selected, span.room_action:hover, .text-prompt-button {
+.text-prompt-button, #result {
+	cursor: crosshair;
+}
+
+span.room_action.selected, span.room_action:hover, .text-prompt-button, #result {
 	color: greenyellow;
 	background: #131313;
 }
@@ -124,8 +128,47 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button {
 	display: none;
 }
 
+.invisible {
+	visibility: none;
+}
+
 .text-prompt-button {
 	text-align: center;
+}
+
+.text-prompt {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#target-string {
+    letter-spacing: .3em;
+    font-family: monospace;
+    font-size: 1.5em;
+    width: 13.9em;
+    margin: 0.5em auto;
+    padding: 2px;
+    font-weight: bold;
+}
+
+#text-area {
+    font-family: monospace;
+    margin: 0.5em auto;
+    display: block;
+    width: 13.9em;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    height: 3em;
+    padding: 2px;
+    border: 1px solid #131313;
+    line-height: 1.3em;
+    background-color: #131313;
+    color: greenyellow;
+    font-weight: bold;
+}
+
+#time, #result {
+	margin-top: 1em;
 }
 
 .blink-me {

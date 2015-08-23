@@ -53,6 +53,31 @@ var GameManager = (function() {
 	return GameManager;
 })();
 
+var string;
+var displayString;
+
+var makeRandomString = function() {
+	var str = '';
+	var bracketSafety;
+
+	for (var i=0; i<30; i++) {
+		bracketSafety = "<";
+
+		while (bracketSafety.charCodeAt(0) === 60 || bracketSafety.charCodeAt(0) === 62) {
+			bracketSafety = String.fromCharCode(Math.floor(Math.random() * 89) + 33);
+		}
+
+		str += bracketSafety;
+
+	}
+
+	return str;
+};
+
+var secs = 30;
+
+var interval;
+
 (function() {
 	game = new GameManager();
 
@@ -71,5 +96,69 @@ var GameManager = (function() {
 		$(this).addClass('hidden');
 		$('.View.room').addClass('hidden');
 		$('.text-prompt').removeClass('hidden');
+
+		string = makeRandomString();
+		displayString = string.slice(0,15) + '<br/>' + string.slice(15);
+		// displayString = "";
+
+		// for(var i=6; i <= string.length; i+= 6) {
+		// 	displayString += string.slice(i-6, i) + "<br/>";
+		// }
+		$('#target-string').html(displayString);
+
+		secs = 30;
+		$('#text-area').on('focus', onTextAreaFocus).on('keypress', onTextAreaKeyPress);
 	});
+
+	var checkText = function() {
+		$('#text-area').off('focus').off('keypress');
+		clearInterval(interval);
+		var keyed = $('#text-area').val();
+
+		$('#time').html('');
+
+		var success = keyed == string,
+			message = '&#60;RESPONSE ',
+			crewman_id = $('.room_action.selected').data('crewman');
+
+		if (success) {
+			game.crew[crewman_id].takeDamage();
+			message += 'VALID&#62;';
+		} else {
+			game.player.takeDamage();
+			message += 'INVALID&#62;';
+		}
+
+		$('#result').html(message).removeClass('hidden');
+	};
+
+	var countdown = function() {
+		secs--;
+		console.log(secs);
+
+		$('#time').html(secs);
+		if (secs == 0) {
+			clearInterval(interval);
+			checkText();
+		}
+	};
+
+	var onTextAreaFocus = function() {
+		if (secs !== 30) return;
+		$('#time').html(secs)
+		interval = setInterval(countdown, 1000);
+	};
+
+	var onTextAreaKeyPress = function(event) {
+		if (event.keyCode == 13) checkText();
+	};
+
+	$('#result').click(function() {
+		clearInterval(interval);
+		$('.text-prompt').addClass('hidden');
+		$(this).html('');
+		$('#text-area').val('');
+		$('.room_action.selected').removeClass('selected');
+	});
+
 })();
