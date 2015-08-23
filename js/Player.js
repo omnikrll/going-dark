@@ -39,6 +39,8 @@ var Player = (function() {
 			self.damageCounter = 0;
 			self.stateCounter++;
 			self.setTextState(self.stateCounter);
+
+			self.SystemReboot();
 			return;
 		}
 
@@ -56,6 +58,30 @@ var Player = (function() {
 			}
 		}
 	};
+
+	Player.prototype.SystemReboot = function() {
+		var rebootScreen = document.getElementsById('reboot');
+		var checkText = document.getElementsById('check');
+		var imageLocText = document.getElementsById('imageLoc');
+		var scanText = document.getElementsById('scan');
+		var okText = document.getElementsById('ok');
+		var rebootTimer = 1000;
+
+		rebootScreen.style.opacity = "1";
+
+		setInterval(function () {checkText.style.opacity = "1";}, rebootTimer);
+		setInterval(function () {imageLocText.style.opacity = "1";}, rebootTimer);
+		setInterval(function () {scanText.style.opacity = "1";}, rebootTimer);
+		setInterval(function () {okText.style.opacity = "1";}, rebootTimer);
+
+		setInterval(function () {
+				checkText.style.opacity = "0";
+				imageLocText.style.opacity = "0";
+				scanText.style.opacity = "0";
+				okText.style.opacity = "0";
+				rebootScreen.style.opacity = "0";
+			}, rebootTimer);
+	}
 
 	Player.prototype.corruptText = function(text) {
 
