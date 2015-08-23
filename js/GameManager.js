@@ -53,10 +53,32 @@ var GameManager = (function() {
 	return GameManager;
 })();
 
+var string;
+
+var makeRandomString = function() {
+	var str = '';
+	var individual_excludes = [91,93,45];
+
+	for (var i=0; i<30; i++) {
+		var charCode = Math.floor(Math.random() * 80) + 33;
+		if (charCode >= 58) charCode += 6;
+		if (individual_excludes.indexOf(charCode) > -1) charCode += 1;
+
+		str += String.fromCharCode(charCode);
+	}
+
+	return str;
+};
+
+var secs = 30;
+
+var interval;
+
 (function() {
 	game = new GameManager();
 
 	$('.room_action').click(function() {
+		resetTextChallenge();
 		$('.View.room').addClass('hidden');
 		$('.room_action').removeClass('selected');
 		$(this).addClass('selected');
@@ -70,6 +92,66 @@ var GameManager = (function() {
 	$('.text-prompt-button').click(function() {
 		$(this).addClass('hidden');
 		$('.View.room').addClass('hidden');
-		$('.text-prompt').removeClass('hidden');
+		$('#text-prompt').removeClass('hidden');
+
+		string = makeRandomString();
+		$('#target-string').html(string);
+
+		secs = 30;
+		$('#text-area').on('focus', onTextAreaFocus).on('keypress', onTextAreaKeyPress);
 	});
+
+	var checkText = function() {
+		$('#text-area').off('focus').off('keypress');
+		clearInterval(interval);
+		var keyed = $('#text-area').val();
+
+		$('#time').html('');
+
+		var success = keyed == string,
+			message = '&#60;RESPONSE ',
+			crewman_id = $('.room_action.selected').data('crewman');
+
+		if (success) {
+			game.crew[crewman_id].takeDamage();
+			message += 'VALID&#62;';
+		} else {
+			game.player.takeDamage();
+			message += 'INVALID&#62;';
+		}
+
+		$('#result').html(message).removeClass('hidden');
+	};
+
+	var countdown = function() {
+		secs--;
+		console.log(secs);
+
+		$('#time').html(secs);
+		if (secs == 0) {
+			clearInterval(interval);
+			checkText();
+		}
+	};
+
+	var onTextAreaFocus = function() {
+		if (secs !== 30) return;
+		$('#time').html(secs)
+		interval = setInterval(countdown, 1000);
+	};
+
+	var onTextAreaKeyPress = function(event) {
+		if (event.keyCode == 13) checkText();
+	};
+
+	var resetTextChallenge = function() {
+		clearInterval(interval);
+		$('#text-prompt').addClass('hidden');
+		$('#result').html('');
+		$('#text-area').val('');
+		$('.room_action.selected').removeClass('selected');
+	};
+
+	$('#result').click(resetTextChallenge);
+
 })();
