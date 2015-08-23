@@ -79,7 +79,7 @@ var Player = (function() {
 		var rebootTimer = 500;
 		var string = "  OK ...";
 
-		this.windowAppear();
+		$('#altwindow').removeClass('hidden');
 		texts.addClass('hidden');
 
 		setTimeout(function () {texts.eq(0).removeClass("hidden") }, rebootTimer * 2);
@@ -112,8 +112,8 @@ var Player = (function() {
 			"color": "white"
 		});
 
-		this.windowAppear();
-		texts.addClass('transparent');
+		$('#altwindow').removeClass('hidden');
+		texts.addClass('hidden');
 		texts.addClass('centered');
 
 		texts.eq(0).html("<br/>ALL THE HUMANS");
@@ -121,10 +121,10 @@ var Player = (function() {
 		texts.eq(2).html("THE SHIP IS");
 		texts.eq(3).html("FINALLY QUIET <span class=\"blink-me\">_</span>");
 
-		setTimeout(function () {texts.eq(0).removeClass("transparent") }, rebootTimer * 2);
-		setTimeout(function () {texts.eq(1).removeClass("transparent") }, rebootTimer * 3);
-		setTimeout(function () {texts.eq(2).removeClass("transparent") }, rebootTimer * 4);
-		setTimeout(function () {texts.eq(3).removeClass("transparent") }, rebootTimer * 5);
+		setTimeout(function () {texts.eq(0).removeClass("hidden") }, rebootTimer * 2);
+		setTimeout(function () {texts.eq(1).removeClass("hidden") }, rebootTimer * 3);
+		setTimeout(function () {texts.eq(2).removeClass("hidden") }, rebootTimer * 4);
+		setTimeout(function () {texts.eq(3).removeClass("hidden") }, rebootTimer * 5);
 	}
 
 	Player.prototype.windowAppear = function() {
