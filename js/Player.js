@@ -59,78 +59,69 @@ var Player = (function() {
 		}
 	};
 
-	Player.prototype.SystemReboot = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
+	Player.prototype.SystemBoot = function() {
+		var screenDiv = $('.altwindow');
+		var texts = document.getElementsByClassName('alt_text');
 		var rebootTimer = 1000;
 
-		rebootScreen.style.opacity = "1";
+		screenDiv.style.opacity = "1";
 
-		setInterval(function () {checkText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {imageLocText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {scanText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {okText.style.opacity = "1";}, rebootTimer);
+		setInterval(function () {texts[0].style.opacity = "1";}, rebootTimer);
+		setInterval(function () {texts[1].style.opacity = "1";}, rebootTimer * 2);
+		setInterval(function () {texts[2].style.opacity = "1";}, rebootTimer * 3);
+		setInterval(function () {texts[3].style.opacity = "1";}, rebootTimer * 4);
 
 		setInterval(function () {
 				checkText.style.opacity = "0";
 				imageLocText.style.opacity = "0";
 				scanText.style.opacity = "0";
 				okText.style.opacity = "0";
-				rebootScreen.style.opacity = "0";
+				screenDiv.style.opacity = "0";
 			}, rebootTimer);
 	}
 
 	Player.prototype.LoseScreen = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
+		var screenDiv = $('.altwindow');
+		var texts = document.getElementsByClassName('alt_text');
 		var rebootTimer = 1000;
 
 		var string = "OK...";
 
-		rebootScreen.style.opacity = "1";
-		rebootScreen.style.pointer-events = "all";
+		screenDiv[0].style.opacity = "1";
+		screenDiv[0].style.pointer-events = "all";
 
 		setTimeout(function () {
-			checkText.style.opacity = "1";
-			imageLocText.style.opacity = "1";
-			scanText.style.opacity = "1";
-			okText.style.opacity = "1";
+			texts[0].style.opacity = "1";
+			texts[1].style.opacity = "1";
+			texts[2].style.opacity = "1";
+			texts[3].style.opacity = "1";
 		}, rebootTimer);
 
 		setInterval(function () {
-			string += "OK..."$("okText").(str);
+			string += "OK...";
+			texts[3].html(string);
 		}, rebootTimer);
 	}
 
 	Player.prototype.WinScreen = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
+		var screenDiv = $('.altwindow');
+		var texts = document.getElementsByClassName('alt_text');
 		var rebootTimer = 1000;
 
-		var string = "OK...";
+		screenDiv.style.opacity = "1";
+		screenDiv.style.background-image = "none";
+		screenDiv.style.background-color = "black";
+		screenDiv.style.pointer-events = "all";
 
-		rebootScreen.style.opacity = "1";
-		rebootScreen.style.pointer-events = "all";
+		texts[3].html("ALL THE HUMANS");
+	  texts[3].html("ARE GONE NOW");
+	 	texts[3].html("THE SHIP IS");
+		texts[3].html("FINALLY QUIET <span class=\"blink-me\">_</span>");
 
-		setTimeout(function () {
-			checkText.style.opacity = "1";
-			imageLocText.style.opacity = "1";
-			scanText.style.opacity = "1";
-			okText.style.opacity = "1";
-		}, rebootTimer);
-
-		setInterval(function () {
-			string += "OK..."$("okText").(str);
-		}, rebootTimer);
+		setInterval(function () {texts[0].style.opacity = "1";}, rebootTimer);
+		setInterval(function () {texts[1].style.opacity = "1";}, rebootTimer * 2);
+		setInterval(function () {texts[2].style.opacity = "1";}, rebootTimer * 3);
+		setInterval(function () {texts[3].style.opacity = "1";}, rebootTimer * 4);
 	}
 
 	Player.prototype.corruptText = function(text) {
