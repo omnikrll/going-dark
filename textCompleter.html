@@ -2,23 +2,36 @@
 <head>
 
 	<script src="vendor/jquery-1.11.3.min.js"></script>
+	<style>
+		#target-string {
+			letter-spacing: .3em;
+		}
+	</style>
 </head>
-<body>
-	<div class="wrapper">
-		<div id="target-string"></div>
-		<textarea id="text-area" maxlength="30"></textarea>
+	<div class="wrapper" >
+		<div id="target-string"  ></div>
+		<textarea id="text-area" maxlength="40"></textarea>
 		<div id="time">30</div>
 		<div id="result"></div>
 	</div>
 
 	<script>
 		var string;
+		var displayString;
+		var bracketSafety;
 
 		var makeRandomString = function() {
 			var str = '';
 
 			for (var i=0; i<30; i++) {
-				str += String.fromCharCode(Math.floor(Math.random() * 94) + 32)
+				bracketSafety = "<";
+
+				while (bracketSafety.charCodeAt(0) === 60 || bracketSafety.charCodeAt(0) === 62) {
+					bracketSafety = String.fromCharCode(Math.floor(Math.random() * 92) + 33);
+				}
+
+				str += bracketSafety;
+
 			}
 
 			return str;
@@ -48,7 +61,14 @@
 
 		(function() {
 			string = makeRandomString();
-			$('#target-string').html(string);
+			displayString = "";
+
+			for(var i=6; i <= string.length; i+= 6) {
+				displayString += string.slice(i-6, i) + "<br/>";
+			}
+
+			$('#target-string').html(displayString);
+			console.log(string);
 
 			$('#text-area').on('focus', function() {
 				interval = setInterval(countdown, 1000);
