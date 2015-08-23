@@ -120,8 +120,12 @@ var interval;
 				return;
 			}
 		} else {
-			game.player.takeDamage();
+			reset = game.player.takeDamage();
 			message += 'INVALID&#62;';
+			if (reset) {
+				resetTextChallenge();
+				return;
+			}
 		}
 
 		$('#result').html(message).removeClass('hidden');

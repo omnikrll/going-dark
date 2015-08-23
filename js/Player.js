@@ -41,7 +41,7 @@ var Player = (function() {
 			self.setTextState(self.stateCounter);
 
 			self.SystemBoot();
-			return;
+			return true;
 		}
 
 		for (var s in self.currentState) {
@@ -63,8 +63,11 @@ var Player = (function() {
 		var texts = $('.alt_text');
 		var rebootTimer = 500;
 		var flash;
+		var altWindow = $('#altwindow');
 
-		$('#altwindow').removeClass('hidden');
+		console.log(altWindow);
+
+		altWindow.removeClass('hidden');
 		texts.addClass('hidden');
 
 		setTimeout(function () {texts.eq(0).removeClass("hidden") }, rebootTimer * 2);
@@ -72,7 +75,7 @@ var Player = (function() {
 		setTimeout(function () {texts.eq(2).removeClass("hidden") }, rebootTimer * 4);
 		setTimeout(function () {texts.eq(3).removeClass("hidden") }, rebootTimer * 5);
 
-		setTimeout(function() {	$('#altwindow').addClass('hidden'); }, rebootTimer * 6);
+		setTimeout(function() {	altWindow.addClass('hidden'); }, rebootTimer * 6);
 
 		flash = setInterval(function () {
 			$('#windowtextbuff').addClass('hidden');
@@ -151,17 +154,23 @@ var Player = (function() {
 	Player.prototype.corruptText = function(text) {
 
 		var self = this,
-			phrase = text.split(' ');
+			phrase = '';
 
-		for (var i = 0; i < self.damageCounter * Math.floor(phrase.length / 3); i++) {
-			var x = Math.floor(Math.random() * phrase.length),
-				word = phrase[x],
-				binary = btoa(word);
+		if (text !== undefined) {
+			phrase = text.split(' ')
 
-			phrase[x] = binary;
+			for (var i = 0; i < self.damageCounter * Math.floor(phrase.length / 3); i++) {
+				var x = Math.floor(Math.random() * phrase.length),
+					word = phrase[x],
+					binary = btoa(word);
+
+				phrase[x] = binary;
+			}
+
+			phrase = phrase.join(' ');
 		}
 
-		return phrase.join(' ');
+		return phrase;
 	};
 
 	return Player;
