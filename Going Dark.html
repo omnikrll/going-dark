@@ -4,91 +4,96 @@
 <meta charset="utf-8">
 <title>Going Dark</title>
 <script src="vendor/jquery-1.11.3.min.js"></script>
-<script src="vendor/Queue.js"></script>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<div class="View" id="Main-Room">
-  <div>LOCATION &amp; STATUS</div>
-  <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
+<div class="wrapper">
+  <div class="content">
+    <div class="overlay"></div>
+    <div class="View" id="Main-Room">
+      <div>LOCATION &amp; STATUS</div>
+      <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
 
-  <section id="header">
-      <div>Date of Departure: MMMLXI</div>
-      <div>Mission: Exploratory</div>
-      <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
-      <div>Most Recent Crew Log:</div>
-      <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
-  </section>
+      <section id="header">
+          <div>Date of Departure: MMMLXI</div>
+          <div>Mission: Exploratory</div>
+          <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
+          <div>Most Recent Crew Log:</div>
+          <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
+      </section>
 
-  <section id="crew">
-    <strong id="title">Crew</strong><br/>
-    <ul>
-      <li id="crewman_0">
-        <div>Patry Garcia</div>
+      <section id="crew">
+        <strong id="title">Crew</strong><br/>
         <ul>
-          <li>Triage: <span class="health">100%</span></li>
-          <li><span id="report_0">Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</span></li>
+          <li id="crewman_0">
+            <div>Patry Garcia</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_0">Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</span></li>
+            </ul>
+          </li>
+          <li id="crewman_1">
+            <div>Arymo Watson</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_1">Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</span></li>
+            </ul>
+          </li>
+          <li id="crewman_2">
+            <div>Vidy Grichy</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_2">Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</span></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-      <li id="crewman_1">
-        <div>Arymo Watson</div>
+      </section>
+
+      <!-- todo: replace all below with vars-->
+      <section id="ship">
+        <div>SHIP MAINTENANCE: 100%</div>
+        <div><span id="class">Third Class A.I. Attendant</span><div>
         <ul>
-          <li>Triage: <span class="health">100%</span></li>
-          <li><span id="report_1">Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</span></li>
+          <li>Persona Integrity: <span id="emoticon">('w')</span></li>
+          <li>I/O Connectivity: 100%</li>
+          <li>System Power: 100%</li>
         </ul>
-      </li>
-      <li id="crewman_2">
-        <div>Vidy Grichy</div>
-        <ul>
-          <li>Triage: <span class="health">100%</span></li>
-          <li><span id="report_2">Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</span></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
 
-  <!-- todo: replace all below with vars-->
-  <section id="ship">
-    <div>SHIP MAINTENANCE: 100%</div>
-    <div><span id="class">Third Class A.I. Attendant</span><div>
-    <ul>
-      <li>Persona Integrity: <span id="emoticon">('w')</span></li>
-      <li>I/O Connectivity: 100%</li>
-      <li>System Power: 100%</li>
-    </ul>
+        <p></p> <!-- this is just here for spacing -->
+        <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
+        <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
+      </section>
 
-    <p></p> <!-- this is just here for spacing -->
-    <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
-    <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
-  </section>
+      <div class="hidden">
+        <div>SUBROUTINES DEMAND ATTENTION</div>
+        <div><strong>&#60;POWER&#62;</strong>&emsp;<strong>&#60;CREW&#62;</strong>&emsp; <strong>&#60;SHIP SYSTEMS&#62;</strong></div>
+      <div>
+    </div>
 
-  <div>
-    <div>SUBROUTINES DEMAND ATTENTION</div>
-    <div><strong>&#60;POWER&#62;</strong>&emsp;<strong>&#60;CREW&#62;</strong>&emsp; <strong>&#60;SHIP SYSTEMS&#62;</strong></div>
-  <div>
-</div>
+    <!-- from choices in main room-->
+    <div class="View hidden" id="Power_Room" data-crewman="2">
+      <p><strong><span class="sign">Power Control</span></strong><div>Vidy Grichy</div><span class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</span></p>
 
-<!-- from choices in main room-->
-<div class="View" id="Power_Room" data-crewman="2">
-  <p><strong><span class="sign">Power Control</span></strong><div>Vidy Grichy</div><span class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</span></p>
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
 
-  <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
-</div>
+    <div class="View hidden" id="Crew_Room" data-crewman="0">
+      <p><strong><span class="sign">Crew Quarters</span></strong>
+      <div>Patry Garcia</div><span class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</span></p>
 
-<div class="View" id="Crew_Room" data-crewman="0">
-  <p><strong><span class="sign">Crew Quarters</span></strong>
-  <div>Patry Garcia</div><span class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</span></p>
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
 
-  <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
-</div>
-
-<div class="View" id="ShipSystems_Room" data-crewman="1">
-  <p><strong><span class="sign">Ship Systems Hub</span></strong>
-  <span class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</span>
-  <div>Arymo Watson</div></p>
+    <div class="View hidden" id="ShipSystems_Room" data-crewman="1">
+      <p><strong><span class="sign">Ship Systems Hub</span></strong>
+      <span class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</span>
+      <div>Arymo Watson</div></p>
 
 
-  <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
+  </div>
 </div>
 
 <script src="text/textStates.js"></script>

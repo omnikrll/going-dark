@@ -1,0 +1,61 @@
+<html>
+<head>
+
+	<script src="vendor/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="target-string"></div>
+		<textarea id="text-area" maxlength="30"></textarea>
+		<div id="time">30</div>
+		<div id="result"></div>
+	</div>
+
+	<script>
+		var string;
+
+		var makeRandomString = function() {
+			var str = '';
+
+			for (var i=0; i<30; i++) {
+				str += String.fromCharCode(Math.floor(Math.random() * 94) + 32)
+			}
+
+			return str;
+		};
+
+		var secs = 30;
+
+		var checkText = function() {
+			clearInterval(interval);
+			var keyed = $('#text-area').val();
+
+			$('#time').html('Time\'s Up');
+			console.log(keyed == string);
+			$('#result').html(keyed == string ? 'PASS' : 'FAIL');
+		};
+
+		var countdown = function() {
+			secs--;
+
+			$('#time').html(secs);
+			if (!secs) {
+				checkText();
+			}
+		};
+
+		var interval;
+
+		(function() {
+			string = makeRandomString();
+			$('#target-string').html(string);
+
+			$('#text-area').on('focus', function() {
+				interval = setInterval(countdown, 1000);
+			}).on('keypress', function(event) {
+				if (event.keyCode == 13) checkText();
+			});
+		})();
+	</script>
+</body>
+</html>
