@@ -14,7 +14,7 @@ var Player = (function() {
 		self.currentState = self.states[i];
 
 		if (!self.currentState) {
-			alert('Congratulations! You are now dead.');
+			self.LoseScreen();
 			return;
 		}
 
@@ -40,7 +40,7 @@ var Player = (function() {
 			self.stateCounter++;
 			self.setTextState(self.stateCounter);
 
-			self.SystemReboot();
+			self.SystemBoot();
 			return;
 		}
 
@@ -59,79 +59,83 @@ var Player = (function() {
 		}
 	};
 
-	Player.prototype.SystemReboot = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
-		var rebootTimer = 1000;
+	Player.prototype.SystemBoot = function() {
+		var screenDiv = document.getElementById('altwindow');
+		var texts = $('.alt_text');
+		var rebootTimer = 500;
+		counter = 0;
 
-		rebootScreen.style.opacity = "1";
+		this.windowAppear();
+		texts.addClass('transparent');
 
-		setInterval(function () {checkText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {imageLocText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {scanText.style.opacity = "1";}, rebootTimer);
-		setInterval(function () {okText.style.opacity = "1";}, rebootTimer);
+		setTimeout(function () {texts.eq(0).removeClass("transparent") }, rebootTimer * 2);
+		setTimeout(function () {texts.eq(1).removeClass("transparent") }, rebootTimer * 3);
+		setTimeout(function () {texts.eq(2).removeClass("transparent") }, rebootTimer * 4);
+		setTimeout(function () {texts.eq(3).removeClass("transparent") }, rebootTimer * 5);
 
-		setInterval(function () {
-				checkText.style.opacity = "0";
-				imageLocText.style.opacity = "0";
-				scanText.style.opacity = "0";
-				okText.style.opacity = "0";
-				rebootScreen.style.opacity = "0";
-			}, rebootTimer);
+		setTimeout(function() { screenDiv.style.opacity = "0";; }, rebootTimer * 6);
 	}
 
 	Player.prototype.LoseScreen = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
-		var rebootTimer = 1000;
+		var texts = $('.alt_text');
+		var rebootTimer = 500;
+		counter = 0;
+		var string = "  OK ...";
 
-		var string = "OK...";
+		this.windowAppear();
+		texts.addClass('transparent');
 
-		rebootScreen.style.opacity = "1";
-		rebootScreen.style.pointer-events = "all";
+		setTimeout(function () {texts.eq(0).removeClass("transparent") }, rebootTimer * 2);
+		setTimeout(function () {texts.eq(1).removeClass("transparent") }, rebootTimer * 3);
+		setTimeout(function () {texts.eq(2).removeClass("transparent") }, rebootTimer * 4);
+		setTimeout(function () {texts.eq(3).removeClass("transparent") }, rebootTimer * 5);
 
-		setTimeout(function () {
-			checkText.style.opacity = "1";
-			imageLocText.style.opacity = "1";
-			scanText.style.opacity = "1";
-			okText.style.opacity = "1";
-		}, rebootTimer);
+		string += "I'LL BE FINE ...";
 
 		setInterval(function () {
-			string += "OK..."$("okText").(str);
-		}, rebootTimer);
+			if(Math.random(0,1) === 0) {
+				string += "OK ...";
+			} else {
+				string += "OK !!!";
+			}
+
+			texts.eq(3).html(string);
+		}, rebootTimer/2);
 	}
 
 	Player.prototype.WinScreen = function() {
-		var rebootScreen = document.getElementsById('reboot');
-		var checkText = document.getElementsById('check');
-		var imageLocText = document.getElementsById('imageLoc');
-		var scanText = document.getElementsById('scan');
-		var okText = document.getElementsById('ok');
-		var rebootTimer = 1000;
+		var screenDiv = $('#altwindow');
+		var texts = $('.alt_text');
+		var rebootTimer = 500;
+		var string = "  OK ...";
 
-		var string = "OK...";
+		screenDiv.css({
+			"background-image": "none",
+			"background-color": "#131313",
+			"color": "white"
+		});
 
-		rebootScreen.style.opacity = "1";
-		rebootScreen.style.pointer-events = "all";
+		this.windowAppear();
+		texts.addClass('transparent');
+		texts.addClass('centered');
 
-		setTimeout(function () {
-			checkText.style.opacity = "1";
-			imageLocText.style.opacity = "1";
-			scanText.style.opacity = "1";
-			okText.style.opacity = "1";
-		}, rebootTimer);
 
-		setInterval(function () {
-			string += "OK..."$("okText").(str);
-		}, rebootTimer);
+		texts.eq(0).html("<br/>ALL THE HUMANS");
+		texts.eq(1).html("ARE GONE NOW");
+		texts.eq(2).html("THE SHIP IS");
+		texts.eq(3).html("FINALLY QUIET <span class=\"blink-me\">_</span>");
+
+		setTimeout(function () {texts.eq(0).removeClass("transparent") }, rebootTimer * 2);
+		setTimeout(function () {texts.eq(1).removeClass("transparent") }, rebootTimer * 3);
+		setTimeout(function () {texts.eq(2).removeClass("transparent") }, rebootTimer * 4);
+		setTimeout(function () {texts.eq(3).removeClass("transparent") }, rebootTimer * 5);
 	}
+
+	Player.prototype.windowAppear = function() {
+		var screenDiv = document.getElementById('altwindow');
+
+		screenDiv.style.opacity = "1";
+	};
 
 	Player.prototype.corruptText = function(text) {
 
