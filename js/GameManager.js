@@ -106,7 +106,7 @@ var interval;
 		clearInterval(interval);
 		var keyed = $('#text-area').val();
 
-		$('#time').html('');
+		$('#time').html('').addClass('hidden');
 
 		var success = keyed == string,
 			message = '&#60;RESPONSE ',
@@ -136,7 +136,7 @@ var interval;
 
 	var onTextAreaFocus = function() {
 		if (secs !== 30) return;
-		$('#time').html(secs)
+		$('#time').html(secs).removeClass('hidden');
 		interval = setInterval(countdown, 1000);
 	};
 

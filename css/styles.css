@@ -150,6 +150,11 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button, #result 
     padding: 2px;
     font-weight: bold;
     word-wrap: break-word;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
 }
 
 #text-area {
