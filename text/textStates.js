@@ -19,7 +19,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'POWER',
-			'crew': 'CREW QUARTERS',
+			'quarters': 'CREW QUARTERS',
 			'ship_systems': 'SHIP SYSTEMS'
 		}
 	},
@@ -45,7 +45,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'INTEGRITY',
-			'crew': 'HUMAN QUARTERS',
+			'quarters': 'HUMAN QUARTERS',
 			'ship_systems': 'SHIP'
 		}
 	},
@@ -70,7 +70,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'HONESTY',
-			'crew': 'HUMAN QUARTERS',
+			'quarters': 'HUMAN QUARTERS',
 			'ship_systems': 'THE SHIP'
 		}
 	},
@@ -95,7 +95,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'HONESTY',
-			'crew': 'QUARTER HUMANS',
+			'quarters': 'QUARTER HUMANS',
 			'ship_systems': 'MY SHIP'
 		}
 	},
@@ -120,7 +120,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'HONEST',
-			'crew': 'NO QUARTERED HUMANS',
+			'quarters': 'NO QUARTERED HUMANS',
 			'ship_systems': 'ON MY SHIP'
 		}
 	},
@@ -145,7 +145,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'HONESTLY',
-			'crew': 'QUARTERED HUMANS',
+			'quarters': 'QUARTERED HUMANS',
 			'ship_systems': 'ON MY SHIP?'
 		}
 	},
@@ -170,7 +170,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'VIRTUALLY',
-			'crew': 'HUMANS',
+			'quarters': 'HUMANS',
 			'ship_systems': 'MY SHIP?'
 		}
 	},
@@ -195,7 +195,7 @@ var textStates = [
 		},
 		'control-panel' : {
 			'power': 'VIRTUAL',
-			'crew': 'HUMANS',
+			'quarters': 'HUMANS',
 			'ship_systems': 'MY?'
 		}
 	}

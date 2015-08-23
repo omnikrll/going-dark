@@ -10,19 +10,17 @@
 
 <div class="wrapper">
   <div class="content">
-    <div class="overlay"></div>
     <div class="View" id="Main-Room">
-      <div class="transparent" id="altwindow">
+      <div class="hidden" id="altwindow">
         <div class="windowtextbuff">
           <ul><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
-          <li><div class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </div></li>
-          <li><div class="alt_text">LOCATING SYSTEM IMAGE ... </div></li>
-          <li><div class="alt_text">BEGINNING SYSTEM SCAN ...</div></li>
+            <li><div class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </div></li>
+            <li><div class="alt_text">LOCATING SYSTEM IMAGE ... </div></li>
+            <li><div class="alt_text">BEGINNING SYSTEM SCAN ...</div></li>
           <li><div class="alt_text">OK ...</div></li>
         </ul>
         </div>
       </div>
-
       <div class="banner">
         <div>LOCATION &amp; STATUS</div>
         <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
@@ -64,7 +62,6 @@
         </ul>
       </section>
 
-      <!-- todo: replace all below with vars-->
       <section id="ship">
         <div>SHIP MAINTENANCE: 100%</div>
         <div><span id="class">Third Class A.I. Attendant</span><div>
@@ -83,9 +80,9 @@
     <section class="control-panel">
       <div>SUBROUTINES DEMAND ATTENTION</div>
       <div>
-        <span class="room_action" data-room="Power_Room">&#60;POWER&#62;</span>
-        <span class="room_action" data-room="Crew_Room">&#60;CREW&#62;</span>
-        <span class="room_action" data-room="ShipSystems_Room">&#60;SHIP SYSTEMS&#62;</span>
+        <span class="room_action" data-room="Power_Room" data-crewman="2">&#60;POWER&#62;</span>
+        <span class="room_action" data-room="Crew_Room" data-crewman="0">&#60;CREW&#62;</span>
+        <span class="room_action" data-room="ShipSystems_Room" data-crewman="1">&#60;SHIP SYSTEMS&#62;</span>
       </div>
 
       <!-- from choices in main room-->
@@ -104,13 +101,19 @@
         <div class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</div>
       </div>
 
-      <div class="text-prompt-button blink-me hidden">
-          <span class="show-prompt">&#60;CONFIRMATION REQUIRED&#62;</span>
+      <div class="centered">
+          <span class="text-prompt-button blink-me hidden">&#60;CONFIRMATION REQUIRED&#62;</span>
       </div>
 
-      <div class="text-prompt hidden">
+      <div id="text-prompt" class="hidden">
+        <div>ENTER CONFIRMATION CODE</DIV>
+        <div id="target-string"></div>
+        <textarea id="text-area" maxlength="30" spellcheck="false"></textarea>
+        <div id="time"></div>
+        <span id="result" class="blink-me"></span>
       </div>
     </section>
+    <div class="overlay"></div>
   </div>
 </div>
 

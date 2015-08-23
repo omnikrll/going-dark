@@ -21,6 +21,14 @@ body {
 	background-repeat: no-repeat;
 }
 
+::selection {
+	background: #91A892;
+}
+
+::-moz-selection {
+	background: #91A892;
+}
+
 .wrapper {
 	width: 800px;
 	margin: 2em auto;
@@ -63,7 +71,6 @@ body {
 	right: .5%;
 	width: 99%;
 	height: 99.5%;
-	opacity: 0;
 	pointer-events: none;
 	background-image: url('../images/rebootScreen.png');
 	-webkit-border-radius: 11px;
@@ -80,23 +87,6 @@ body {
 	width: 60%;
 	height: 50%;
 	border: 1px dashed;
-}
-
-.darkwin {
-	position: absolute;
-	color: #131313;
-	top: .25%;
-	left: .5%;
-	bottom: .5%;
-	right: .5%;
-	width: 99%;
-	height: 99.5%;
-	opacity: 0;
-	pointer-events: none;
-	background-image: none);
-	-webkit-border-radius: 11px;
-	-moz-border-radius: 11px;
-	border-radius: 11px;
 }
 
 b {
@@ -162,10 +152,6 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button {
 
 .View.room .sign {
 	margin-bottom: 0.5em;
-}
-
-.transparent {
-	opacity: 0;
 }
 
 .centered {
