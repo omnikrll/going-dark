@@ -136,7 +136,7 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button, #result 
 	text-align: center;
 }
 
-.text-prompt {
+#text-prompt {
     margin-top: 1em;
     text-align: center;
 }
@@ -149,6 +149,7 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button, #result 
     margin: 0.5em auto;
     padding: 2px;
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 #text-area {
@@ -165,6 +166,7 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button, #result 
     background-color: #131313;
     color: greenyellow;
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 #time, #result {
