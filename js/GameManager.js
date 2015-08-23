@@ -57,28 +57,19 @@ var GameManager = (function() {
 	game = new GameManager();
 
 	$('.room_action').click(function() {
-		var id = $(this).parents('.View').data('crewman'),
-			crewman = game.crew[id],
-			attack = $(this).data('action'),
-			hit = attack == Math.floor(Math.random() * 3),
-			damaged = crewman.health > 0 ? crewman.attack() : false;
+		$('.View.room').addClass('hidden');
+		$('.room_action').removeClass('selected');
+		$(this).addClass('selected');
 
-		if (hit) {
-			console.log('Player hits');
-			crewman.takeDamage();
+		var room = $(this).data('room');
 
-			if (game.crew[0].health == 0 && game.crew[1].health == 0 && game.crew[2].health == 0) {
-				alert('THE HUMANS ARE DEAD');
-			}
-		} else {
-			console.log('Player took no damage');
-		}
+		$('#' + room).removeClass('hidden');
+		$('.text-prompt-button').removeClass('hidden');
+	});
 
-		if (damaged) {
-			console.log('Crewman hits');
-			game.player.takeDamage();
-		} else {
-			console.log('Crewman took no damage');
-		}
+	$('.text-prompt-button').click(function() {
+		$(this).addClass('hidden');
+		$('.View.room').addClass('hidden');
+		$('.text-prompt').removeClass('hidden');
 	});
 })();
