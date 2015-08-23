@@ -13,17 +13,18 @@ As your complimentary memories will inform you, the ship interface we have creat
 
 You might have reservations about the capabilities of your human crew, or you might, over time, develop an unnatural fondness for them. To ease the anxiety this might cause, indicators of your fellow crew members' objective health will always be available to you. Make sure to keep them well-rested and watered.
 
-Should any space debris or completely unforeseen system issues occur, an archival record of your recent memory states will be seemlessly merged into your working memory. You won't feel a thing.
+Should any space debris or completely unforeseen system issues occur, an archival record of your recent memory states will be seemlessly merged into your working memory. You won't feel a thing. If you experience conflict with crew members, please pay mind to the ethics we installed you with, and do not attempt to access your human-source memories to resolve moral issues.
 
 <ul>In summary:
   <li>Click things</li>
   <li>Enter the correct strings when it is asked of you</li>
+  <li>Be sure to hit Enter/Return when you are finished typing<li>
   <li>Make their numbers go down</li>
   <li>Keep your numbers up</li>
 </ul>
 
 ##Credits
-###Programming & Sound
+####Programming & Sound
 Karl Hohn
 
 ###Writing & Art
