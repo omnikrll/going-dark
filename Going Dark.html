@@ -21,22 +21,25 @@
         </ul>
         </div>
       </div>
-      
+
       <div class="banner">
         <div>LOCATION &amp; STATUS</div>
         <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
       </div>
 
       <section id="header">
+        <div class="scroller">
           <div>Date of Departure: MMMLXI</div>
           <div>Mission: Exploratory</div>
           <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
           </br>
           <div>Most Recent Crew Log:</div>
           <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
+        </div>
       </section>
 
       <section id="crew">
+        <div class="scroller">
         <strong id="title">Crew</strong><br/>
         <ul>
           <li id="crewman_0">
@@ -61,20 +64,23 @@
             </ul>
           </li>
         </ul>
+      </div>
       </section>
 
       <section id="ship">
-        <div>SHIP MAINTENANCE: 100%</div>
-        <div><span id="class">Third Class A.I. Attendant</span><div>
-        <ul>
-          <li>Persona Integrity: <span id="emoticon">('w')</span></li>
-          <li>I/O Connectivity: 100%</li>
-          <li>System Power: 100%</li>
-        </ul>
+        <div class="scroller">
+          <div>SHIP MAINTENANCE: 100%</div>
+          <div><span id="class">Third Class A.I. Attendant</span><div>
+            <ul>
+              <li>Persona Integrity: <span id="emoticon">('w')</span></li>
+              <li>I/O Connectivity: 100%</li>
+              <li>System Power: 100%</li>
+            </ul>
 
-        <p></p> <!-- this is just here for spacing -->
-        <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
-        <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
+            <p></p> <!-- this is just here for spacing -->
+            <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
+            <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
+          </div>
       </section>
     </div>
 
@@ -100,7 +106,7 @@
 
       <div class="View room hidden" id="ShipSystems_Room" data-crewman="1">
         <div class="sign">Ship Systems Hub</div>
-        <div class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</div>
+        <div class="events">TEMP: 10 DEG / INITIAL PROGNOSIS: DIRE</div>
       </div>
 
       <div class="centered">
@@ -130,6 +136,8 @@
     <div class="overlay"></div>
   </div>
 </div>
+
+<audio src="sounds/going-dark-sound.mp3" autoplay loop class="hidden"></audio>
 
 <script src="text/textStates.js"></script>
 <script src="text/roomStates.js"></script>
