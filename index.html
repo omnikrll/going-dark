@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Going Dark</title>
+<script src="vendor/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<div class="wrapper">
+  <div class="content">
+    <div class="View" id="Main-Room">
+      <div class="hidden" id="altwindow">
+        <div id="windowtextbuff"><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
+          <ul id="screenlist">
+            <li class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </li>
+            <li class="alt_text">LOCATING SYSTEM IMAGE ... </li>
+            <li class="alt_text">BEGINNING SYSTEM SCAN ...</li>
+            <li class="alt_text">OK ...</li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="banner">
+        <div>LOCATION &amp; STATUS</div>
+        <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
+      </div>
+
+      <section id="header">
+        <div class="scroller">
+          <div>Date of Departure: MMMLXI</div>
+          <div>Mission: Exploratory</div>
+          <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
+          </br>
+          <div>Most Recent Crew Log:</div>
+          <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
+        </div>
+      </section>
+
+      <section id="crew">
+        <div class="scroller">
+        <strong id="title">Crew</strong><br/>
+        <ul>
+          <li id="crewman_0">
+            <div>Patry Garcia</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_0">Internal Report: FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE</span></li>
+            </ul>
+          </li>
+          <li id="crewman_1">
+            <div>Arymo Watson</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_1">Internal Report: TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.</span></li>
+            </ul>
+          </li>
+          <li id="crewman_2">
+            <div>Vidy Grichy</div>
+            <ul>
+              <li>Triage: <span class="health">100%</span></li>
+              <li><span id="report_2">Internal Report: U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      </section>
+
+      <section id="ship">
+        <div class="scroller">
+          <div>SHIP MAINTENANCE: 100%</div>
+          <div><span id="class">Third Class A.I. Attendant</span><div>
+            <ul>
+              <li>Persona Integrity: <span id="emoticon">('w')</span></li>
+              <li>I/O Connectivity: 100%</li>
+              <li>System Power: 100%</li>
+            </ul>
+
+            <p></p> <!-- this is just here for spacing -->
+            <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
+            <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
+          </div>
+      </section>
+    </div>
+
+    <section class="control-panel">
+      <div class="centered">
+        <span class="control-panel-header">SUBROUTINES DEMAND ATTENTION</span>
+        <div>
+          <span class="room_action" data-room="Power_Room" data-crewman="2">&#60;POWER&#62;</span>
+          <span class="room_action" data-room="Crew_Room" data-crewman="0">&#60;CREW&#62;</span>
+          <span class="room_action" data-room="ShipSystems_Room" data-crewman="1">&#60;SHIP SYSTEMS&#62;</span>
+        </div>
+      </div>
+      <!-- from choices in main room-->
+      <div class="View room hidden" id="Power_Room" data-crewman="2">
+        <div class="sign">Power Control</div>
+        <div class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</div>
+      </div>
+
+      <div class="View room hidden" id="Crew_Room" data-crewman="0">
+        <div class="sign">Crew Quarters</div>
+        <div class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</div>
+      </div>
+
+      <div class="View room hidden" id="ShipSystems_Room" data-crewman="1">
+        <div class="sign">Ship Systems Hub</div>
+        <div class="events">TEMP: 10 DEG / INITIAL PROGNOSIS: DIRE</div>
+      </div>
+
+      <div class="centered">
+          <span class="text-prompt-button blink-me hidden">&#60;CONFIRMATION REQUIRED&#62;</span>
+      </div>
+
+      <div id="text-prompt" class="hidden">
+        <div>ENTER CONFIRMATION CODE</DIV>
+        <div id="target-string" unselectable="on" onselectstart="return false;" onmousedown="return false;"></div>
+        <textarea id="text-area" maxlength="30" spellcheck="false"></textarea>
+        <div id="time"></div>
+        <span id="result" class="blink-me"></span>
+      </div>
+    </section>
+
+    <div id="altwindow" class="hidden">
+      <div class="rebootBuff">
+        <ul><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
+        <li><div id="check">  <br/>ATTEMPTING SYSTEM REBOOT...</div></li>
+        <li><div id="imageLoc">LOCATING SYSTEM IMAGE...</div></li>
+        <li><div id="scan">BEGINNING SYSTEM SCAN...</div></li>
+        <li><div id="ok">OK...</div></li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </div>
+</div>
+
+<audio src="sounds/going-dark-sound.wav" autoplay loop class="hidden"></audio>
+
+<script src="text/textStates.js"></script>
+<script src="text/roomStates.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Crewman.js"></script>
+<script src="js/GameManager.js"></script>
+</body>
+</html>
