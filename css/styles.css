@@ -135,7 +135,7 @@ section {
 	padding: 10px;
 	border: 1px dashed;
 	float: left;
-	overflow: scroll;
+	overflow: auto;
 }
 
 section.control-panel {
@@ -291,3 +291,11 @@ span.room_action:hover,
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }
+
+
+/*.scroller {
+	overflow-x: hidden;
+	margin-right: -28px;
+	overflow-y: auto;
+}*/
+::-webkit-scrollbar { display: none; }
