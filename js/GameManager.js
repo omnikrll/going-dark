@@ -107,7 +107,7 @@ var interval;
 		clearInterval(interval);
 		var keyed = $('#text-area').val();
 
-		$('#time').html('');
+		$('#time').html('').addClass('hidden');
 
 		var success = keyed == string,
 			message = '&#60;RESPONSE ',
@@ -116,9 +116,17 @@ var interval;
 		if (success) {
 			game.crew[crewman_id].takeDamage();
 			message += 'VALID&#62;';
+			if (game.crew[0].health == 0 && game.crew[1].health == 0 && game.crew[2].health == 0) {
+				game.player.WinScreen();
+				return;
+			}
 		} else {
-			game.player.takeDamage();
+			reset = game.player.takeDamage();
 			message += 'INVALID&#62;';
+			if (reset) {
+				resetTextChallenge();
+				return;
+			}
 		}
 
 		$('#result').html(message).removeClass('hidden');
@@ -137,7 +145,7 @@ var interval;
 
 	var onTextAreaFocus = function() {
 		if (secs !== 30) return;
-		$('#time').html(secs)
+		$('#time').html(secs).removeClass('hidden');
 		interval = setInterval(countdown, 1000);
 	};
 

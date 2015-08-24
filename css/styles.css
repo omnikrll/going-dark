@@ -48,6 +48,26 @@ body {
 	border-radius: 11px;
 }
 
+.content:after {
+    content: "";
+    display: block;
+    background-image: url('../images/scanline_arrows.png');
+    background-position-y: -16px;
+    background-position-x: 1px;
+    background-size: 836px 653px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 .overlay {
 	position: absolute;
 	top: 0;
@@ -65,19 +85,24 @@ body {
 }
 
 #altwindow {
-	position: absolute;
-	color: #131313;
-	top: .25%;
-	left: .5%;
-	bottom: .5%;
-	right: .5%;
-	width: 99%;
-	height: 99.5%;
-	pointer-events: none;
-	background-image: url('../images/rebootScreen.png');
-	-webkit-border-radius: 11px;
-	-moz-border-radius: 11px;
-	border-radius: 11px;
+    position: absolute;
+    color: #131313;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('../images/rebootScreen.png');
+    /*opacity: 0;*/
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    background-size: 863px 675px;
+    background-repeat: no-repeat;
+    background-position-x: -7px;
+    background-position-y: -29px;
 }
 #windowtextbuff {
 	position: absolute;
@@ -141,13 +166,27 @@ span.room_action {
 	margin-right: 1em;
 }
 
+span.room_action:last-of-type {
+	margin-right: 0;
+}
+
 .text-prompt-button, #result {
 	cursor: crosshair;
 }
 
-span.room_action.selected, span.room_action:hover, .text-prompt-button, #result {
+span.room_action.selected,
+span.room_action:hover,
+.control-panel-header,
+.text-prompt-button,
+#result {
 	color: greenyellow;
 	background: #131313;
+}
+
+.control-panel-header {
+	display: inline-block;
+	padding: 0 0.25em;
+	margin: -0.5em 0 0.5em 0;
 }
 
 .View.room {
@@ -189,6 +228,11 @@ span.room_action.selected, span.room_action:hover, .text-prompt-button, #result 
     padding: 2px;
     font-weight: bold;
     word-wrap: break-word;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
 }
 
 #text-area {
