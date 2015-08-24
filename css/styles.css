@@ -35,6 +35,8 @@ body {
 }
 
 .content {
+	cursor: url('../images/mouse-mixborder.ico'), default;
+
 	width: 840px;
 	height: 640px;
 	padding: 29px;
@@ -227,28 +229,28 @@ span.room_action:hover,
     padding: 2px;
     font-weight: bold;
     word-wrap: break-word;
-    -moz-user-select: none; 
-    -webkit-user-select: none; 
-    -ms-user-select:none; 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
     user-select:none;
     -o-user-select:none;
 }
 
 #text-area {
-    font-family: monospace;
-    margin: 0.5em auto;
-    display: block;
-    width: 13.9em;
-    font-size: 1.5em;
-    letter-spacing: 0.3em;
-    height: 3em;
-    padding: 2px;
-    border: 1px solid #131313;
-    line-height: 1.3em;
-    background-color: #131313;
-    color: greenyellow;
-    font-weight: bold;
-    word-wrap: break-word;
+  font-family: monospace;
+  margin: 0.5em auto;
+  display: block;
+  width: 13.9em;
+  font-size: 1.5em;
+  letter-spacing: 0.3em;
+  height: 3em;
+  padding: 2px;
+  border: 1px solid #131313;
+  line-height: 1.3em;
+  background-color: #131313;
+  color: greenyellow;
+  font-weight: bold;
+  word-wrap: break-word;
 }
 
 #time, #result {

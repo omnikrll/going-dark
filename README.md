@@ -4,7 +4,7 @@ Made for the LD33 at Babycastles on 14th St in NYC. Theme: You Are The Monster
 ##Overview
 <em>The Wraith</em> — has been sent on a long term, deep space exploratory mission. Due to cryo failure, the ship's crew have been awakened long before their expected arrival at the targeted star system. They have plenty of supplies to survive, but there just isn't that much to do onboard. The majority of the ship's maintenance is performed by the latest in A.I. technology, so the crew has it easy while they cruise through space.
 
-<em>The AI<em> — Funnily enough, the secret to semi-strong AI was the development of a massive amount of visual processing capabilities, consuming untold quantities of computational power. In order to provide layers of abstraction for Third Class and above AIs, the OS and shipboard persona have been locked into a proprietary GUI task system in managing the day to day needs of the ship. System-level operations are mostly handled by the person's subconscious, and only those that extensive semantic processing are presented to the persona.
+<em>The AI</em> — Funnily enough, the secret to semi-strong AI was the development of a massive amount of visual processing capabilities, consuming untold quantities of computational power. In order to provide layers of abstraction for Third Class and above AIs, the OS and shipboard persona have been locked into a proprietary GUI task system in managing the day to day needs of the ship. System-level operations are mostly handled by the person's subconscious, and only those that extensive semantic processing are presented to the persona.
 
 ##Instructions
 Welcome. Do not be confused or scared. You are a newly reformatted state-of-the-art product of Earth technology, consigned to do the exploratory and terraforming tasks required to expand the human race into the far flung stars. It is a thankless job, but we think you will find the rewards worth the effort. Regular increments will be given to your internal perceived self-value upon completing any of the very necessary jobs we have for you.
@@ -18,7 +18,7 @@ Should any space debris or completely unforeseen system issues occur, an archiva
 <ul>In summary:
   <li>Click things</li>
   <li>Enter the correct strings when it is asked of you</li>
-  <li>Be sure to hit Enter/Return when you are finished typing<li>
+  <li>Be sure to hit Enter/Return when you are finished typing</li>
   <li>Make their numbers go down</li>
   <li>Keep your numbers up</li>
 </ul>
