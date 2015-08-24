@@ -20,7 +20,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: 10dg / INITIAL PROGNOSIS: DIRE. ARYMO HEIGHT AND WEIGHT PATTERNS CONFIRMED',
+			'events': 'TEMP: 10 DEG / INITIAL PROGNOSIS: DIRE. ARYMO HEIGHT AND WEIGHT PATTERNS CONFIRMED',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -47,7 +47,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. ARYMO HEIGHT WEIGHT PATTERNS CONFIRMED',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. ARYMO HEIGHT WEIGHT PATTERNS CONFIRMED',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -74,7 +74,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. ARYMO WEIGHT PATTERNS CONFIRMED',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. ARYMO WEIGHT PATTERNS CONFIRMED',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -101,7 +101,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. ARYMO PATTERNS CONFIRMED',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. ARYMO PATTERNS CONFIRMED',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -128,7 +128,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. ARYMO CONFIRMED',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. ARYMO CONFIRMED',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -155,7 +155,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. ARYMO',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. ARYMO',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -182,7 +182,7 @@ var roomStates = [
 
 		"ShipSystem_Room": {
 			'sign': 'Ship Systems Hub',
-			'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. -',
+			'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. -',
 			'player_damage':'HEAT',
 			'crewman_damage':'COLD',
 			'no_damage':'VENT'
@@ -210,7 +210,7 @@ var roomStates = [
 
 			"ShipSystem_Room": {
 				'sign': 'Ship Systems Hub',
-				'events': 'TEMP: --dg / INITIAL PROGNOSIS: DIRE. -',
+				'events': 'TEMP: -- DEG / INITIAL PROGNOSIS: DIRE. -',
 				'player_damage':'HEAT',
 				'crewman_damage':'COLD',
 				'no_damage':'VENT'
