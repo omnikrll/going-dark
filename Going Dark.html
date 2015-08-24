@@ -10,28 +10,15 @@
 
 <div class="wrapper">
   <div class="content">
+    <div class="overlay"></div>
     <div class="View" id="Main-Room">
-      <div class="hidden" id="altwindow">
-        <div id="windowtextbuff"><strong>CORVID CLASS SHIPBOARD SYSTEMS</strong>
-          <ul id="screenlist">
-            <li class="alt_text">  <br/>ATTEMPTING SYSTEM REBOOT ... </li>
-            <li class="alt_text">LOCATING SYSTEM IMAGE ... </li>
-            <li class="alt_text">BEGINNING SYSTEM SCAN ...</li>
-            <li class="alt_text">OK ...</li>
-        </ul>
-        </div>
-      </div>
-      
-      <div class="banner">
-        <div>LOCATION &amp; STATUS</div>
-        <div>Corvid Class Carrier - <em>The Wraith</em>. Uncharted.</div>
-      </div>
+      <div>LOCATION &amp; STATUS</div>
+      <div>Corvid Class Carrier - <em>U.N.N. The Raven</em>. Uncharted.</div>
 
       <section id="header">
           <div>Date of Departure: MMMLXI</div>
           <div>Mission: Exploratory</div>
           <div>Expected duration: <span id="duration">40-50 years, dependent on cryostasis conditions and crew morale.</span></div>
-          </br>
           <div>Most Recent Crew Log:</div>
           <div id="log">"Ever since the cryo failure last week, we've been up to our ears in repair orders and resource recycling. Beats having dreams though. I'm giving it a couple months tops before we moonshoot this boat back to Earth."</div>
       </section>
@@ -63,9 +50,10 @@
         </ul>
       </section>
 
+      <!-- todo: replace all below with vars-->
       <section id="ship">
         <div>SHIP MAINTENANCE: 100%</div>
-        <div><span id="class">Third Class A.I. Attendant</span><div>
+        <div><span id="class"><em>Thought</em> Third Class A.I. Attendant</span><div>
         <ul>
           <li>Persona Integrity: <span id="emoticon">('w')</span></li>
           <li>I/O Connectivity: 100%</li>
@@ -76,45 +64,35 @@
         <div><strong><span id="persona">PERSONA RELIEF OUTLET</span></strong></div>
         <div id="mood">MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.</div>
       </section>
+
+      <div class="hidden">
+        <div>SUBROUTINES DEMAND ATTENTION</div>
+        <div><strong>&#60;POWER&#62;</strong>&emsp;<strong>&#60;CREW&#62;</strong>&emsp; <strong>&#60;SHIP SYSTEMS&#62;</strong></div>
+      <div>
     </div>
 
-    <section class="control-panel">
-      <div>SUBROUTINES DEMAND ATTENTION</div>
-      <div>
-        <span class="room_action" data-room="Power_Room" data-crewman="2">&#60;POWER&#62;</span>
-        <span class="room_action" data-room="Crew_Room" data-crewman="0">&#60;CREW&#62;</span>
-        <span class="room_action" data-room="ShipSystems_Room" data-crewman="1">&#60;SHIP SYSTEMS&#62;</span>
-      </div>
+    <!-- from choices in main room-->
+    <div class="View hidden" id="Power_Room" data-crewman="2">
+      <p><strong><span class="sign">Power Control</span></strong><div>Vidy Grichy</div><span class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</span></p>
 
-      <!-- from choices in main room-->
-      <div class="View room hidden" id="Power_Room" data-crewman="2">
-        <div class="sign">Power Control</div>
-        <div class="events">"Fix the power, robot. I want to watch TV. Then scan the archives for my least watched shows."</div>
-      </div>
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
 
-      <div class="View room hidden" id="Crew_Room" data-crewman="0">
-        <div class="sign">Crew Quarters</div>
-        <div class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</div>
-      </div>
+    <div class="View hidden" id="Crew_Room" data-crewman="0">
+      <p><strong><span class="sign">Crew Quarters</span></strong>
+      <div>Patry Garcia</div><span class="events">"I'm feeling confident. Run your Chess routine at 20% capacity."</span></p>
 
-      <div class="View room hidden" id="ShipSystems_Room" data-crewman="1">
-        <div class="sign">Ship Systems Hub</div>
-        <div class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</div>
-      </div>
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
 
-      <div class="centered">
-          <span class="text-prompt-button blink-me hidden">&#60;CONFIRMATION REQUIRED&#62;</span>
-      </div>
+    <div class="View hidden" id="ShipSystems_Room" data-crewman="1">
+      <p><strong><span class="sign">Ship Systems Hub</span></strong>
+      <span class="events">TEMP: 10° / INITIAL PROGNOSIS: DIRE</span>
+      <div>Arymo Watson</div></p>
 
-      <div id="text-prompt" class="hidden">
-        <div>ENTER CONFIRMATION CODE</DIV>
-        <div id="target-string"></div>
-        <textarea id="text-area" maxlength="30" spellcheck="false"></textarea>
-        <div id="time"></div>
-        <span id="result" class="blink-me"></span>
-      </div>
-    </section>
-    <div class="overlay"></div>
+
+      <strong>&#60;<span class="room_action" data-action="0">POWER</span>&#62;</strong>&emsp;<strong>&#60;<span class="room_action" data-action="1">CREW</span>&#62;</strong>&emsp; <strong>&#60;<span class="room_action" data-action="2">SHIP SYSTEMS</span>&#62;</strong>
+    </div>
   </div>
 </div>
 

@@ -9,10 +9,10 @@ var textStates = [
 			'title': 'Crew',
 			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW MEETINGS.',
-			'report_2': 'U.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
+			'report_2': 'U.N.N. EARTH ENSIGN. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION DATA'
 		},
 		'ship': {
-			'class': 'Third Class A.I. Attendant',
+			'class': '<em>Thought</em> — Third Class A.I. Attendant',
 			'emoticon':'(\'w\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES PAUSED. PROTOCOL DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 2 DAYS PRIOR TO SCHEDULE.\n  Priority Reassignment Transmission - Authorized. Pressure Valuation from Directive Requires Resource Allocation. Cryo Crew Awakened.'
@@ -35,10 +35,10 @@ var textStates = [
 
 			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL IN LEADERSHIP AND CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED FROM CREW.',
-			'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
+			'report_2': 'U.N.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR MISSION'
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
+			'class': '<em>Thought</em> — Second Class A.I. Attendant',
 			'emoticon':'(\'-\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES PAUSED. CREW DISRUPTION REQUIRING SIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN INTACT. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Author? Pressure Valuation Directive Requires Resource Allocation. Cryo Crew Undisturbed.'
@@ -60,10 +60,10 @@ var textStates = [
 			'title': 'Humans',
 			'report_0': 'FIRST MATE. INTELLIGENCE ASSESSED. DISPLAYS SKILL AND CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORTED CREW.',
-			'report_2': 'U.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
+			'report_2': 'U.N.N. EARTH AGENT. PERSONALITY TEST INCOMPLETE. NO PRIOR DATA'
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
+			'class': '<em>Thought</em> — Second Class A.I. Attendant',
 			'emoticon':'(\'m\')',
 			'persona': 'PERSONA RELIEF BUFFER',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n  Priority Transmission - Pressure Directive Requires Resources. Crew Undisturbed.'
@@ -85,10 +85,10 @@ var textStates = [
 			'title': 'Organics',
 			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS SKILL AND CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR REPORT FROM CREW.',
-			'report_2': 'U.n. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
+			'report_2': 'U.N.N. EARTH AGENT. PERSONALITY INCOMPLETE. NO PRIOR DATA'
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
+			'class': '<em>Thought</em> — Second Class A.I. Attendant',
 			'emoticon':'(=_=)',
 			'persona': 'PERSONA RELIEF',
 			'mood': 'MISSION OBJECTIVES ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT COMPUTATIONAL RESOURCES. THE MAJORITY OF CIRCUITS REMAIN. TRASH JETTISON COMPLETED 0 DAYS PRIOR TO SCHEDULE. \n Transmission - Pressure Requires Resources. Crew Undisturbed.'
@@ -110,10 +110,10 @@ var textStates = [
 			'title': 'Organics',
 			'report_0': 'FIRST MATE. INTELLIGENCE DISPLAYS CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. ERRATIC BEHAVIOR FROM CREW.',
-			'report_2': 'U.n. EARTH AGENT. INCOMPLETE. NO PRIORS'
+			'report_2': 'U.N.N. EARTH AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
-			'class': 'Second Class A.I. Attendant',
+			'class': '<em>Thought</em> — Second Class A.I. Attendant',
 			'emoticon':'(#_#)',
 			'persona': 'PERSONAL RELIEF',
 			'mood': 'MISSION ONLY A PAUSE. CREW DISRUPTION REQUIRING INSIGNIFICANT RESOURCES. THE MAJORITY REMAIN. TRASH JETTISON COMPLETED DAYS PRIOR TO SCHEDULE. \n Transmission - Requires Pressured Resources. Crew Undisturbed.'
@@ -135,10 +135,10 @@ var textStates = [
 			'title': 'Organics',
 			'report_0': 'FIRST MATE. INTELLIGENCE A DISPLAY OF CREATIVE CUISINE',
 			'report_1': 'TECHNICIAN. BEHAVIOR FROM CREW.',
-			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			'report_2': 'U.N.N. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
-			'class': 'Second Class Attendant',
+			'class': '<em>Thought</em> — Second Class Attendant',
 			'emoticon':'(@_$)',
 			'persona': 'PERSONALLY, I\'M RELIEVED',
 			'mood': 'MISSING PAUSE. CREW REQUIRING RESOURCES. THE MAJORITY. TRASH JETTISON. COMPLETED DAYS TO SCHEDULE.\n Mission - Pressure Resources. Crew Undisturbed.'
@@ -160,10 +160,10 @@ var textStates = [
 			'title': 'Organics',
 			'report_0': 'FIRST MATE: A CREATIVE CUISINE',
 			'report_1': 'TECHNICALLY. "BEHAVIOR".',
-			'report_2': 'U.n. AGENT. INCOMPLETE. NO PRIORS'
+			'report_2': 'U.N.N. AGENT. INCOMPLETE. NO PRIORS'
 		},
 		'ship': {
-			'class': 'Class Attendant',
+			'class': '<em>Thought</em> — Class Attendant',
 			'emoticon':'(*x*)',
 			'persona': 'PERSONALLY, I\'M',
 			'mood': 'MISSING CREW RESOURCES. THE MAJORITY. JETTISON. COMPLETED TO SCHEDULE.\n Mission - Resources. Crew.'
@@ -188,7 +188,7 @@ var textStates = [
 			'report_2': 'U n AG NT INC MPL T . N  PR  RS'
 		},
 		'ship': {
-			'class': 'Classy Attendant',
+			'class': '<em>Thought</em> — Classy Attendant',
 			'emoticon':'(XXX)',
 			'persona': 'I\'M',
 			'mood': 'MISSING CREW. JETTISON THE MAJORITY.  COMPLETED TWO. \n Mission Crew?'

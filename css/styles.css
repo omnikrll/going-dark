@@ -35,6 +35,7 @@ body {
 }
 
 .content {
+	cursor: url('../images/mouse-mixborder.ico'), auto;
 	width: 840px;
 	height: 640px;
 	padding: 29px;
