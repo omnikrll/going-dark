@@ -1,5 +1,5 @@
 #Going Dark - A Malevolent AI Simulator
-Made for the LD33 at Babycastles on 14th St in NYC. Theme: You Are The Monster
+Made for the LD33 game jam at Babycastles on 14th St in NYC. Theme: You Are The Monster
 
 ##Overview
 <em>The Wraith</em> — has been sent on a long term, deep space exploratory mission. Due to cryo failure, the ship's crew have been awakened long before their expected arrival at the targeted star system. They have plenty of supplies to survive, but there just isn't that much to do onboard. The majority of the ship's maintenance is performed by the latest in A.I. technology, so the crew has it easy while they cruise through space.
@@ -32,6 +32,9 @@ Samuel DiBella
 
 ###Assets & Tools Used
 <em>Sound</em>
+Ableton Live
+SoundScaper
+SIDTracker 64
 Freesound.org
 
 <em>Art</em>
