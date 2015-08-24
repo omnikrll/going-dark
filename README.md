@@ -18,7 +18,7 @@ Should any space debris or completely unforeseen system issues occur, an archiva
 <ul>In summary:
   <li>Click things</li>
   <li>Enter the correct strings when it is asked of you</li>
-  <li>Be sure to hit Enter/Return when you are finished typing<li>
+  <li>Be sure to hit Enter/Return when you are finished typing</li>
   <li>Make their numbers go down</li>
   <li>Keep your numbers up</li>
 </ul>
