@@ -32,10 +32,7 @@ Samuel DiBella
 
 ###Assets & Tools Used
 <em>Sound</em>
-Ableton Live
-SoundScaper
-SIDTracker 64
-Freesound.org
+Ableton Live, SoundScaper, SIDTracker 64
 
 <em>Art</em>
 GIMP
